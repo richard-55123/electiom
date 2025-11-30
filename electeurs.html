@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devenir Électeur aux Élections – Cameroun</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+
+<body
+    style="background-image: url('/assets/images/About.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+
+    <div id="header"></div>
+
+    <section class="bg-dark bg-opacity-75 text-white py-5 text-center">
+        <div class="container">
+            <span class="badge bg-warning mb-3">🇨🇲 Inscription Électeur</span>
+            <h1 class="fw-bold">Devenir Électeur aux Élections</h1>
+            <p class="lead mt-3">
+                Cette inscription doit respecter les exigences officielles en vigueur au Cameroun.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-lg-9">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+
+                            <h3 class="fw-bold text-center mb-4">Formulaire Officiel d’Inscription Électeur</h3>
+
+                            <form>
+
+                                <!-- IDENTITÉ -->
+                                <h5 class="fw-bold mb-3">1. Informations personnelles</h5>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Nom *</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Prénom *</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label">Sexe *</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Choisir</option>
+                                            <option>Homme</option>
+                                            <option>Femme</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label">Date de naissance *</label>
+                                        <input type="date" class="form-control" required>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="form-label">Nationalité *</label>
+                                        <input type="text" class="form-control" value="Camerounaise" readonly>
+                                    </div>
+                                </div>
+
+                                <!-- CNI -->
+                                <h5 class="fw-bold mt-4 mb-3">2. Carte Nationale d’Identité</h5>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Numéro CNI *</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Date de délivrance *</label>
+                                        <input type="date" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <!-- CONTACT -->
+                                <h5 class="fw-bold mt-4 mb-3">3. Coordonnées</h5>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Téléphone *</label>
+                                        <input type="tel" class="form-control" placeholder="+237 6XX XXX XXX" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Email *</label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <!-- LOCALISATION -->
+                                <h5 class="fw-bold mt-4 mb-3">4. Localisation</h5>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Région *</label>
+                                        <select class="form-select" required>
+                                            <option disabled selected>Choisir</option>
+                                            <option>Adamaoua</option>
+                                            <option>Centre</option>
+                                            <option>Est</option>
+                                            <option>Extrême-Nord</option>
+                                            <option>Littoral</option>
+                                            <option>Nord</option>
+                                            <option>Nord-Ouest</option>
+                                            <option>Ouest</option>
+                                            <option>Sud</option>
+                                            <option>Sud-Ouest</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label">Département *</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <!-- DOCUMENTS -->
+                                <h5 class="fw-bold mt-4 mb-3">5. Pièces obligatoires</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">Photo officielle *</label>
+                                    <input type="file" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Copie CNI *</label>
+                                    <input type="file" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Justificatif de résidence *</label>
+                                    <input type="file" class="form-control" required>
+                                </div>
+
+                                <!-- ENGAGEMENT -->
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" required>
+                                    <label class="form-check-label">
+                                        Je certifie sur l’honneur l’exactitude des informations fournies.
+                                    </label>
+                                </div>
+
+                                <!-- BOUTON -->
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-warning btn-lg fw-bold rounded-pill">
+                                        Soumettre mon inscription
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <!-- js -->
+    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+</body>
+
+</html>
