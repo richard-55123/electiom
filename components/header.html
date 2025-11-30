@@ -1,16 +1,22 @@
+<!-- TOP BAR -->
 <div class="bg-success text-white py-1">
-  <div class="container d-flex justify-content-between align-items-center small">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center small text-center text-md-start gap-2">
+    
     <span>🇨🇲 République du Cameroun — Plateforme Électorale Nationale</span>
+    
     <div>
       <button onclick="setLanguage('fr')" class="btn btn-sm btn-light fw-bold me-1">FR</button>
       <button onclick="setLanguage('en')" class="btn btn-sm btn-warning fw-bold">EN</button>
     </div>
+
   </div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
   <div class="container">
 
+    <!-- LOGO -->
     <a class="navbar-brand fw-bold text-warning" href="index.html">
       ÉLECTIONS <span class="text-danger">CM</span>
     </a>
@@ -22,44 +28,38 @@
 
     <!-- MENU -->
     <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+      <ul class="navbar-nav ms-auto align-items-lg-center text-center gap-lg-2">
 
         <li class="nav-item">
-          <a class="nav-link text-white fw-semibold" href="index.html">Accueil</a>
+          <a class="nav-link fw-semibold" href="index.html">Accueil</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white fw-semibold" href="Candidats.html">Candidats</a>
+          <a class="nav-link fw-semibold" href="Candidats.html">Candidats</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white fw-semibold" href="electeurs.html">Électeurs</a>
+          <a class="nav-link fw-semibold" href="electeurs.html">Électeurs</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white fw-semibold" href="resultats.html">Résultats</a>
+          <a class="nav-link fw-semibold" href="resultats.html">Résultats</a>
         </li>
 
-        <!-- <li class="nav-item">
-          <a class="nav-link text-white fw-semibold" href="statistiques.html">Statistiques</a>
-        </li> -->
-
-        <!-- <li class="nav-item">
-          <a class="nav-link text-white fw-semibold" href="contact.html">Contact</a>
-        </li> -->
-
-        <!-- DON -->
+        <!-- BOUTON DON -->
         <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
           <a href="don.html" class="btn btn-danger fw-bold rounded-pill px-4">
-            Faire un don
+             Faire un don
           </a>
         </li>
 
       </ul>
     </div>
+
   </div>
 </nav>
 
+<!-- BARRE TRICOLORE -->
 <div class="d-flex w-100" style="height:5px;">
   <div class="bg-success flex-fill"></div>
   <div class="bg-danger flex-fill"></div>
