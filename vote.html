@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote – ÉLECTIONS CM</title>
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        body {
+            background: #f2f4f7;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .candidate-card {
+            transition: 0.3s;
+        }
+
+        .candidate-card:hover {
+            transform: scale(1.02);
+        }
+
+        .candidate-photo {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 100px;
+            border: 3px solid #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <div class="container py-5">
+
+        <h2 class="text-center fw-bold mb-4">Votez pour votre candidat</h2>
+        <p class="text-center text-muted mb-5">Vous ne pouvez voter qu'une seule fois.</p>
+
+        <div class="row g-4">
+
+            <!-- CANDIDAT 1 -->
+            <div class="col-md-4">
+                <div class="card candidate-card shadow-sm border-0 text-center p-4">
+                    <img src="assets/images/candidats/c1.jpg" class="candidate-photo mx-auto mb-3">
+                    <h4 class="fw-bold">Jean Dupont</h4>
+                    <p class="text-muted">Parti Unifié National</p>
+                    <button class="btn btn-success w-100 fw-bold vote-btn" data-name="Jean Dupont">
+                        Voter
+                    </button>
+                </div>
+            </div>
+
+            <!-- CANDIDAT 2 -->
+            <div class="col-md-4">
+                <div class="card candidate-card shadow-sm border-0 text-center p-4">
+                    <img src="assets/images/candidats/c2.jpg" class="candidate-photo mx-auto mb-3">
+                    <h4 class="fw-bold">Sarah Mbarga</h4>
+                    <p class="text-muted">Mouvement Progressiste</p>
+                    <button class="btn btn-success w-100 fw-bold vote-btn" data-name="Sarah Mbarga">
+                        Voter
+                    </button>
+                </div>
+            </div>
+
+            <!-- CANDIDAT 3 -->
+            <div class="col-md-4">
+                <div class="card candidate-card shadow-sm border-0 text-center p-4">
+                    <img src="assets/images/candidats/c3.jpg" class="candidate-photo mx-auto mb-3">
+                    <h4 class="fw-bold">Paul Ngono</h4>
+                    <p class="text-muted">Alliance Démocratique</p>
+                    <button class="btn btn-success w-100 fw-bold vote-btn" data-name="Paul Ngono">
+                        Voter
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- SCRIPT POUR LE VOTE -->
+    <script>
+        const voteButtons = document.querySelectorAll(".vote-btn");
+
+        voteButtons.forEach(btn => {
+            btn.addEventListener("click", function () {
+
+                // Vérifier si l'utilisateur a déjà voté
+                if (localStorage.getItem("aDejaVote")) {
+                    alert("Vous avez déjà voté !\nIl n'est pas possible de voter deux fois.");
+                    return;
+                }
+
+                const candidat = this.getAttribute("data-name");
+
+                // Confirmation du vote
+                const confirmation = confirm("Confirmez-vous votre vote pour : " + candidat + " ?");
+
+                if (confirmation) {
+
+                    // Marquer l'utilisateur comme ayant voté
+                    localStorage.setItem("aDejaVote", "oui");
+                    localStorage.setItem("votePour", candidat);
+
+                    alert("Votre vote pour " + candidat + " a été enregistré avec succès !");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
