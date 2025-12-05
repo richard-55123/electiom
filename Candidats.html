@@ -1,58 +1,91 @@
+<!-- Déclaration du type de document - Ceci est un document HTML5 -->
 <!DOCTYPE html>
+
+<!-- Début du document HTML, langue définie en français -->
 <html lang="fr">
 
+<!-- Section d'en-tête : informations techniques non visibles pour les visiteurs -->
+
 <head>
+    <!-- Définition de l'encodage des caractères (UTF-8 permet d'afficher les accents) -->
     <meta charset="UTF-8">
+
+    <!-- Balise pour le responsive design : s'adapte à la taille de l'écran du dispositif -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page (apparaît dans l'onglet du navigateur) -->
     <title>Devenir Candidat aux Élections - Cameroun</title>
 
-    <!-- FAVICON -->
+    <!-- FAVICON : Petite icône qui apparaît dans l'onglet du navigateur -->
     <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
 
-    <!-- Google Fonts -->
+    <!-- Importation des polices d'écriture depuis Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Importation des fichiers CSS (feuilles de style) -->
+    <!-- Bootstrap : bibliothèque CSS pour faciliter la mise en page -->
     <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Notre feuille de style personnalisée -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
+<!-- Corps du document : tout ce qui est visible par les visiteurs -->
+<!-- Classe "bg-light" donne un fond clair -->
+<!-- Style inline : ajoute une image de fond avec des propriétés spécifiques -->
 
 <body class="bg-light"
     style="background-image: url('/assets/images/intégral.png'); background-size: cover; background-position: center; background-attachment: fixed;">
 
+    <!-- Emplacement où sera chargé l'en-tête du site (depuis un fichier séparé) -->
     <div id="header"></div>
 
+    <!-- Première section : Bannière d'introduction -->
     <section class="bg-dark text-white py-5 text-center">
-        <div class="container">
+        <div class="container"> <!-- Conteneur pour centrer le contenu -->
+            <!-- Badge/étiquette "Candidature Officielle" avec le drapeau camerounais -->
             <span class="badge bg-warning mb-3">🇨🇲 Candidature Officielle</span>
+
+            <!-- Titre principal de la page -->
             <h1 class="fw-bold">Devenir Candidat aux Élections</h1>
+
+            <!-- Sous-titre/description -->
             <p class="lead mt-3">
                 Cette demande doit respecter les exigences officielles en vigueur au Cameroun.
             </p>
         </div>
     </section>
 
-
-    <section class="py-5">
+    <!-- Deuxième section : Formulaire de candidature -->
+    <section class="py-5"> <!-- py-5 : padding vertical (espacement haut et bas) -->
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center"> <!-- Centrer la ligne horizontalement -->
 
+                <!-- Colonne principale (prend 9/12 de la largeur sur grand écran, 12/12 sur mobile) -->
                 <div class="col-12 col-lg-9">
+                    <!-- Carte contenant le formulaire (ombre pour effet 3D) -->
                     <div class="card shadow">
-                        <div class="card-body p-4">
+                        <div class="card-body p-4"> <!-- p-4 : padding (marge interne) -->
 
+                            <!-- Titre du formulaire -->
                             <h3 class="fw-bold text-center mb-4">Formulaire Officiel de Candidature</h3>
 
+                            <!-- Début du formulaire -->
                             <form>
 
-                                <!-- IDENTITÉ -->
+                                <!-- SECTION 1 : INFORMATIONS PERSONNELLES -->
                                 <h5 class="fw-bold mb-3">1. Informations personnelles</h5>
+
+                                <!-- Première ligne : Nom et Prénom -->
                                 <div class="row g-3 mb-3">
+                                    <!-- g-3 : espacement entre les colonnes, mb-3 : marge basse -->
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label">Nom *</label>
+                                        <!-- Colonne prenant 6/12 sur écran moyen, 12/12 sur mobile -->
+                                        <label class="form-label">Nom *</label> <!-- * indique un champ obligatoire -->
                                         <input type="text" class="form-control" required>
+                                        <!-- Champ texte obligatoire -->
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Prénom *</label>
@@ -60,27 +93,31 @@
                                     </div>
                                 </div>
 
+                                <!-- Deuxième ligne : Sexe, Date de naissance, Nationalité -->
                                 <div class="row g-3 mb-3">
-                                    <div class="col-12 col-md-4">
+                                    <div class="col-12 col-md-4"> <!-- 4/12 sur écran moyen, 12/12 sur mobile -->
                                         <label class="form-label">Sexe *</label>
+                                        <!-- Menu déroulant pour choisir le sexe -->
                                         <select class="form-select" required>
-                                            <option selected disabled>Choisir</option>
+                                            <option selected disabled>Choisir</option> <!-- Option par défaut -->
                                             <option>Homme</option>
                                             <option>Femme</option>
                                         </select>
                                     </div>
                                     <div class="col-12 col-md-4">
                                         <label class="form-label">Date de naissance *</label>
+                                        <!-- Champ date avec calendrier intégré -->
                                         <input type="date" class="form-control" required>
                                     </div>
                                     <div class="col-12 col-md-4">
                                         <label class="form-label">Nationalité *</label>
+                                        <!-- Champ en lecture seule (pré-rempli) -->
                                         <input type="text" class="form-control" value="Camerounaise" readonly>
                                     </div>
                                 </div>
 
-                                <!-- CNI -->
-                                <h5 class="fw-bold mt-4 mb-3">2. Carte Nationale d’Identité</h5>
+                                <!-- SECTION 2 : CARTE NATIONALE D'IDENTITÉ -->
+                                <h5 class="fw-bold mt-4 mb-3">2. Carte Nationale d'Identité</h5>
                                 <div class="row g-3 mb-3">
                                     <div class="col-12 col-md-4">
                                         <label class="form-label">Numéro CNI *</label>
@@ -96,26 +133,29 @@
                                     </div>
                                 </div>
 
-                                <!-- CONTACT -->
+                                <!-- SECTION 3 : COORDONNÉES -->
                                 <h5 class="fw-bold mt-4 mb-3">3. Coordonnées</h5>
                                 <div class="row g-3 mb-3">
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Téléphone *</label>
+                                        <!-- Champ téléphone avec placeholder (texte d'exemple) -->
                                         <input type="tel" class="form-control" placeholder="+237 6XX XXX XXX" required>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Email *</label>
                                         <input type="email" class="form-control" required>
+                                        <!-- Type email pour validation -->
                                     </div>
                                 </div>
 
-                                <!-- LOCALISATION -->
+                                <!-- SECTION 4 : LOCALISATION -->
                                 <h5 class="fw-bold mt-4 mb-3">4. Localisation</h5>
                                 <div class="row g-3 mb-3">
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Région *</label>
                                         <select class="form-select" required>
                                             <option disabled selected>Choisir</option>
+                                            <!-- Liste des régions du Cameroun -->
                                             <option>Adamaoua</option>
                                             <option>Centre</option>
                                             <option>Est</option>
@@ -134,11 +174,11 @@
                                     </div>
                                 </div>
 
-                                <!-- POLITIQUE -->
+                                <!-- SECTION 5 : INFORMATIONS ÉLECTORALES -->
                                 <h5 class="fw-bold mt-4 mb-3">5. Informations électorales</h5>
                                 <div class="row g-3 mb-3">
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label">Type d’élection *</label>
+                                        <label class="form-label">Type d'élection *</label>
                                         <select class="form-select" required>
                                             <option disabled selected>Choisir</option>
                                             <option>Présidentielle</option>
@@ -151,6 +191,7 @@
                                         <label class="form-label">Parti politique *</label>
                                         <select class="form-select" required>
                                             <option disabled selected>Choisir</option>
+                                            <!-- Liste de quelques partis politiques camerounais -->
                                             <option>RDPC</option>
                                             <option>SDF</option>
                                             <option>UDC</option>
@@ -160,54 +201,64 @@
                                     </div>
                                 </div>
 
-                                <!-- DOCUMENTS -->
+                                <!-- SECTION 6 : PIÈCES OBLIGATOIRES -->
                                 <h5 class="fw-bold mt-4 mb-3">6. Pièces obligatoires</h5>
+
+                                <!-- Premier fichier : Photo officielle -->
                                 <div class="mb-3">
                                     <label class="form-label">Photo officielle *</label>
+                                    <!-- Champ pour uploader un fichier -->
                                     <input type="file" class="form-control" required>
                                 </div>
 
+                                <!-- Deuxième fichier : Attestation de résidence -->
                                 <div class="mb-3">
                                     <label class="form-label">Attestation de résidence *</label>
                                     <input type="file" class="form-control" required>
                                 </div>
 
+                                <!-- Troisième fichier : Casier judiciaire -->
                                 <div class="mb-3">
                                     <label class="form-label">Casier judiciaire *</label>
                                     <input type="file" class="form-control" required>
                                 </div>
 
-                                <!-- ENGAGEMENT -->
+                                <!-- CASE À COCHER : ENGAGEMENT -->
                                 <div class="form-check mb-4">
+                                    <!-- Case à cocher obligatoire -->
                                     <input class="form-check-input" type="checkbox" required>
                                     <label class="form-check-label">
-                                        Je certifie sur l’honneur l’exactitude des informations fournies.
+                                        Je certifie sur l'honneur l'exactitude des informations fournies.
                                     </label>
                                 </div>
 
-                                <!-- BOUTON -->
-                                <div class="d-grid">
+                                <!-- BOUTON DE SOUMISSION -->
+                                <div class="d-grid"> <!-- d-grid : étire le bouton sur toute la largeur -->
                                     <button type="submit" class="btn btn-warning btn-lg fw-bold rounded-pill">
                                         Soumettre ma candidature
                                     </button>
                                 </div>
 
-                            </form>
+                            </form> <!-- Fin du formulaire -->
 
                         </div>
-                    </div>
-                </div>
+                    </div> <!-- Fin de la carte -->
+                </div> <!-- Fin de la colonne principale -->
 
             </div>
         </div>
-    </section>
+    </section> <!-- Fin de la section formulaire -->
 
+    <!-- Emplacement où sera chargé le pied de page (depuis un fichier séparé) -->
     <div id="footer"></div>
 
-    <!-- js -->
+    <!-- SCRIPTS JAVASCRIPT (à la fin pour charger la page plus rapidement) -->
+    <!-- Bootstrap JavaScript : pour les fonctionnalités interactives -->
     <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Notre fichier JavaScript personnalisé -->
     <script src="/assets/js/app.js"></script>
 
-</body>
+</body> <!-- Fin du corps du document -->
 
-</html>
+</html> <!-- Fin du document HTML -->

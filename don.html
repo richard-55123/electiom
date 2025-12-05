@@ -1,136 +1,205 @@
+<!-- Déclaration du type de document : ce fichier est une page HTML5 -->
 <!DOCTYPE html>
+
+<!-- Début du document HTML, la langue principale est le français (lang="fr") -->
 <html lang="fr">
 
+<!-- Section d'en-tête : contient les informations techniques et métadonnées -->
+
 <head>
+    <!-- Définition de l'encodage des caractères : UTF-8 permet d'afficher les accents et caractères spéciaux -->
     <meta charset="UTF-8">
+
+    <!-- Compatibilité avec Internet Explorer : utilise le moteur de rendu le plus récent -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Balise pour le design responsive : s'adapte à la taille de l'écran du dispositif -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON : petite icône qui apparaît à côté du titre dans l'onglet du navigateur -->
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- SEO -->
+    <!-- SEO (Search Engine Optimization) : optimisation pour les moteurs de recherche -->
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur et dans les résultats Google -->
     <title>Guide d'utilisation - Plateforme Élections Cameroun | Aide et Assistance</title>
+
+    <!-- Description de la page pour les moteurs de recherche -->
     <meta name="description"
         content="Guide complet d'utilisation de la plateforme électorale camerounaise. Apprenez à vous inscrire, voter, consulter les résultats et utiliser toutes les fonctionnalités.">
+
+    <!-- Mots-clés pour aider au référencement sur les moteurs de recherche -->
     <meta name="keywords"
         content="aide élections Cameroun, guide utilisateur, comment voter, inscription électorale, résultats élections, assistance Élections CM">
+
+    <!-- Auteur du site web -->
     <meta name="author" content="Élections Cameroun">
 
-    <!-- Open Graph -->
+    <!-- Open Graph : métadonnées pour l'affichage sur les réseaux sociaux (Facebook, WhatsApp, LinkedIn) -->
+    <!-- Titre qui apparaîtra quand on partage le lien sur les réseaux sociaux -->
     <meta property="og:title" content="Guide d'utilisation - Plateforme Élections Cameroun">
+
+    <!-- Description qui apparaîtra sur les réseaux sociaux -->
     <meta property="og:description"
         content="Tout ce que vous devez savoir pour utiliser la plateforme électorale officielle du Cameroun.">
-    <meta property="og:image" content="https://www.tonsite.com/assets/images/help-guide.jpg">
-    <meta property="og:url" content="https://www.tonsite.com/aide.html">
+
+    <!-- Image qui apparaîtra sur les réseaux sociaux quand on partage le lien -->
+    <meta property="og:image" content="assets/images/logo.png">
+
+    <!-- Type de contenu (ici, un site web) -->
     <meta property="og:type" content="website">
 
-    <!-- Google Fonts -->
+    <!-- Importation des polices d'écriture depuis Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap"
         rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- Importation des feuilles de style CSS -->
+    <!-- Bootstrap CSS : bibliothèque qui facilite la mise en page et le design -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Notre feuille de style personnalisée pour les modifications spécifiques -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome : bibliothèque d'icônes -->
+    <!-- Permet d'utiliser des icônes comme des flèches, des croix, des coches, etc. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
+<!-- Corps du document : tout le contenu visible par les visiteurs -->
+
 <body>
 
-    <!-- HEADER -->
+    <!-- SECTION HEADER : sera chargée depuis un fichier séparé (header.html) -->
+    <!-- L'en-tête contient généralement le logo, le menu de navigation, etc. -->
     <div id="header"></div>
 
-    <!-- SECTION HERO -->
-    <section class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row align-items-center">
+    <!-- SECTION HERO : bannière d'introduction en haut de la page -->
+    <section class="bg-dark text-white py-5"> <!-- py-5 : padding vertical important -->
+        <div class="container"> <!-- Conteneur pour centrer le contenu et limiter sa largeur -->
+            <div class="row align-items-center"> <!-- Ligne avec des colonnes alignées verticalement -->
+                <!-- Colonne de gauche (texte) -->
                 <div class="col-lg-8">
+                    <!-- Badge/étiquette "Guide d'utilisation" -->
                     <span class="badge bg-warning text-dark fs-6 mb-3">Guide d'utilisation</span>
+
+                    <!-- Titre principal de la page -->
                     <h1 class="display-5 fw-bold mb-4">
                         Guide complet de la plateforme
+                        <!-- Partie du titre en couleur jaune -->
                         <span class="text-warning">Élections Cameroun</span>
                     </h1>
+
+                    <!-- Description principale -->
                     <p class="lead mb-4">
                         Découvrez comment utiliser toutes les fonctionnalités de notre plateforme électorale officielle.
                         De l'inscription à la consultation des résultats, nous vous guidons à chaque étape.
                     </p>
-                    <div class="d-flex flex-wrap gap-2">
+
+                    <!-- Boutons de navigation rapide vers les sections de la page -->
+                    <div class="d-flex flex-wrap gap-2"> <!-- flex-wrap : passe à la ligne si pas assez de place -->
+                        <!-- Bouton avec lien vers la section inscription (via #inscription) -->
                         <a href="#inscription" class="btn btn-outline-light rounded-pill">Inscription électeur</a>
+                        <!-- Bouton avec lien vers la section candidature -->
                         <a href="#candidature" class="btn btn-outline-light rounded-pill">Devenir candidat</a>
+                        <!-- Bouton avec lien vers la section résultats -->
                         <a href="#resultats" class="btn btn-outline-light rounded-pill">Consulter les résultats</a>
+                        <!-- Bouton avec lien vers la section FAQ -->
                         <a href="#faq" class="btn btn-outline-light rounded-pill">FAQ</a>
                     </div>
                 </div>
+
+                <!-- Colonne de droite (icône) -->
                 <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <!-- mt-4 mt-lg-0 : marge en haut sur mobile seulement -->
+                    <!-- Grande icône de point d'interrogation -->
                     <i class="fas fa-question-circle display-1 text-warning"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LIENS RAPIDES -->
-    <section class="bg-light py-4">
+    <!-- SECTION : LIENS RAPIDES vers les pages principales -->
+    <section class="bg-light py-4"> <!-- py-4 : padding vertical moyen -->
         <div class="container">
-            <div class="row g-2 text-center">
-                <div class="col-6 col-md-3">
+            <div class="row g-2 text-center"> <!-- g-2 : petit espacement entre les colonnes -->
+                <!-- Lien vers la page d'inscription électeur -->
+                <div class="col-6 col-md-3"> <!-- 6 colonnes sur mobile, 3 sur écran moyen -->
                     <a href="electeurs.html" class="btn btn-outline-success w-100">
-                        <i class="fas fa-user-plus me-2"></i>Inscription
+                        <!-- w-100 : bouton sur toute la largeur -->
+                        <i class="fas fa-user-plus me-2"></i> <!-- Icône Font Awesome avec marge à droite -->
+                        Inscription
                     </a>
                 </div>
+
+                <!-- Lien vers la page de candidature -->
                 <div class="col-6 col-md-3">
                     <a href="candidats.html" class="btn btn-outline-warning w-100">
-                        <i class="fas fa-user-tie me-2"></i>Candidature
+                        <i class="fas fa-user-tie me-2"></i> <!-- Icône de cravate (candidat) -->
+                        Candidature
                     </a>
                 </div>
+
+                <!-- Lien vers la page des résultats -->
                 <div class="col-6 col-md-3">
                     <a href="resultats.html" class="btn btn-outline-danger w-100">
-                        <i class="fas fa-chart-bar me-2"></i>Résultats
+                        <i class="fas fa-chart-bar me-2"></i> <!-- Icône de graphique -->
+                        Résultats
                     </a>
                 </div>
+
+                <!-- Lien vers la page de compte utilisateur -->
                 <div class="col-6 col-md-3">
                     <a href="register.html" class="btn btn-outline-primary w-100">
-                        <i class="fas fa-user-circle me-2"></i>Mon compte
+                        <i class="fas fa-user-circle me-2"></i> <!-- Icône de profil utilisateur -->
+                        Mon compte
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FONCTIONNALITÉS PRINCIPALES -->
-    <section class="py-5">
+    <!-- SECTION : FONCTIONNALITÉS PRINCIPALES -->
+    <section class="py-5"> <!-- py-5 : padding vertical important -->
         <div class="container">
-            <div class="text-center mb-5">
+            <!-- Titre de la section centré -->
+            <div class="text-center mb-5"> <!-- mb-5 : marge basse importante -->
                 <h2 class="fw-bold mb-3">Fonctionnalités principales</h2>
                 <p class="text-muted lead">Découvrez les services offerts par notre plateforme</p>
             </div>
 
-            <div class="row g-4">
-                <!-- Carte 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
+            <!-- Grille de 3 cartes -->
+            <div class="row g-4"> <!-- g-4 : espacement entre les cartes -->
+
+                <!-- CARTE 1 : Inscription Électeur -->
+                <div class="col-md-4"> <!-- Prend 4 colonnes sur 12 sur écran moyen -->
+                    <div class="card h-100 border-0 shadow-sm"> <!-- h-100 : même hauteur pour toutes les cartes -->
+                        <div class="card-body text-center p-4"> <!-- p-4 : padding interne -->
+                            <!-- Cercle jaune avec icône -->
                             <div class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                style="width: 70px; height: 70px;">
-                                <i class="fas fa-user-plus fs-3"></i>
+                                style="width: 70px; height: 70px;"> <!-- Style en ligne pour les dimensions -->
+                                <i class="fas fa-user-plus fs-3"></i> <!-- Icône d'ajout d'utilisateur -->
                             </div>
+                            <!-- Titre de la carte -->
                             <h4 class="card-title fw-bold">Inscription Électeur</h4>
+                            <!-- Description de la fonctionnalité -->
                             <p class="card-text">
                                 Inscrivez-vous sur les listes électorales pour exercer votre droit de vote.
                                 Vérifiez votre éligibilité et suivez les étapes.
                             </p>
+                            <!-- Bouton pour voir le guide -->
                             <a href="#inscription" class="btn btn-outline-warning">Voir le guide</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Carte 2 -->
+                <!-- CARTE 2 : Candidature -->
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center p-4">
+                            <!-- Cercle rouge avec icône -->
                             <div class="bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                                 style="width: 70px; height: 70px;">
-                                <i class="fas fa-user-tie fs-3"></i>
+                                <i class="fas fa-user-tie fs-3"></i> <!-- Icône de cravate (candidat) -->
                             </div>
                             <h4 class="card-title fw-bold">Candidature</h4>
                             <p class="card-text">
@@ -142,13 +211,14 @@
                     </div>
                 </div>
 
-                <!-- Carte 3 -->
+                <!-- CARTE 3 : Résultats -->
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center p-4">
+                            <!-- Cercle vert avec icône -->
                             <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                                 style="width: 70px; height: 70px;">
-                                <i class="fas fa-chart-bar fs-3"></i>
+                                <i class="fas fa-chart-bar fs-3"></i> <!-- Icône de graphique -->
                             </div>
                             <h4 class="card-title fw-bold">Résultats</h4>
                             <p class="card-text">
@@ -163,27 +233,34 @@
         </div>
     </section>
 
-    <!-- GUIDE ÉTAPE PAR ÉTAPE -->
+    <!-- SECTION : GUIDE ÉTAPE PAR ÉTAPE POUR L'INSCRIPTION -->
     <section class="bg-light py-5" id="inscription">
+        <!-- id="inscription" permet de faire un lien vers cette section -->
         <div class="container">
+            <!-- Titre de la section -->
             <div class="text-center mb-5">
                 <span class="badge bg-success fs-6 mb-3">Guide pratique</span>
                 <h2 class="fw-bold mb-3">Comment s'inscrire comme électeur</h2>
                 <p class="text-muted">Suivez ces étapes simples pour vous inscrire</p>
             </div>
 
+            <!-- Grille de 4 étapes (2 par ligne sur grand écran) -->
             <div class="row">
-                <!-- Étape 1 -->
-                <div class="col-lg-6 mb-4">
+
+                <!-- ÉTAPE 1 -->
+                <div class="col-lg-6 mb-4"> <!-- mb-4 : marge basse entre les étapes -->
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body p-4">
-                            <div class="d-flex align-items-start">
+                            <div class="d-flex align-items-start"> <!-- Aligne verticalement le numéro et le texte -->
+                                <!-- Cercle vert avec le numéro 1 -->
                                 <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
                                     style="width: 40px; height: 40px;">
                                     1
                                 </div>
                                 <div>
+                                    <!-- Titre de l'étape -->
                                     <h4 class="fw-bold">Accédez au formulaire</h4>
+                                    <!-- Description de l'étape -->
                                     <p class="mb-3">
                                         Cliquez sur "Devenir Électeur" dans le menu principal ou accédez directement à
                                         la page <a href="electeurs.html" class="text-success fw-bold">Inscription
@@ -195,11 +272,12 @@
                     </div>
                 </div>
 
-                <!-- Étape 2 -->
+                <!-- ÉTAPE 2 -->
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-start">
+                                <!-- Cercle vert avec le numéro 2 -->
                                 <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
                                     style="width: 40px; height: 40px;">
                                     2
@@ -216,11 +294,12 @@
                     </div>
                 </div>
 
-                <!-- Étape 3 -->
+                <!-- ÉTAPE 3 -->
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-start">
+                                <!-- Cercle vert avec le numéro 3 -->
                                 <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
                                     style="width: 40px; height: 40px;">
                                     3
@@ -237,11 +316,12 @@
                     </div>
                 </div>
 
-                <!-- Étape 4 -->
+                <!-- ÉTAPE 4 -->
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-start">
+                                <!-- Cercle vert avec le numéro 4 -->
                                 <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
                                     style="width: 40px; height: 40px;">
                                     4
@@ -259,73 +339,105 @@
                 </div>
             </div>
 
+            <!-- Bouton pour commencer l'inscription -->
             <div class="text-center mt-4">
                 <a href="electeurs.html" class="btn btn-success btn-lg rounded-pill px-4">
-                    <i class="fas fa-arrow-right me-2"></i>Commencer l'inscription
+                    <i class="fas fa-arrow-right me-2"></i> <!-- Icône de flèche -->
+                    Commencer l'inscription
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- GUIDE CANDIDATURE -->
-    <section class="py-5" id="candidature">
+    <!-- SECTION : GUIDE CANDIDATURE -->
+    <section class="py-5" id="candidature"> <!-- id="candidature" pour les liens internes -->
         <div class="container">
+            <!-- Titre de la section -->
             <div class="text-center mb-5">
                 <span class="badge bg-warning text-dark fs-6 mb-3">Guide candidats</span>
                 <h2 class="fw-bold mb-3">Devenir candidat aux élections</h2>
                 <p class="text-muted">Processus de dépôt de candidature</p>
             </div>
 
-            <div class="row align-items-center mb-5">
+            <!-- Deux colonnes : Conditions et Documents -->
+            <div class="row align-items-center mb-5"> <!-- align-items-center : aligne verticalement -->
+
+                <!-- Colonne de gauche : Conditions requises -->
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-4">
+                            <!-- Titre avec icône -->
                             <h4 class="fw-bold text-warning mb-3">
-                                <i class="fas fa-check-circle me-2"></i>Conditions requises
+                                <i class="fas fa-check-circle me-2"></i> <!-- Icône de coche -->
+                                Conditions requises
                             </h4>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item border-0">
-                                    <i class="fas fa-check text-success me-2"></i>Être de nationalité camerounaise
+                            <!-- Liste des conditions -->
+                            <ul class="list-group list-group-flush"> <!-- list-group-flush : supprime les bordures -->
+                                <!-- Condition 1 -->
+                                <li class="list-group-item border-0"> <!-- border-0 : pas de bordure -->
+                                    <i class="fas fa-check text-success me-2"></i> <!-- Icône verte de coche -->
+                                    Être de nationalité camerounaise
                                 </li>
+                                <!-- Condition 2 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-check text-success me-2"></i>Avoir au moins 23 ans
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Avoir au moins 23 ans
                                 </li>
+                                <!-- Condition 3 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-check text-success me-2"></i>Jouir de ses droits civiques et
-                                    politiques
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Jouir de ses droits civiques et politiques
                                 </li>
+                                <!-- Condition 4 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-check text-success me-2"></i>Casier judiciaire vierge
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Casier judiciaire vierge
                                 </li>
+                                <!-- Condition 5 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-check text-success me-2"></i>Être à jour avec le fisc
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Être à jour avec le fisc
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
+
+                <!-- Colonne de droite : Documents nécessaires -->
+                <div class="col-lg-6 mt-4 mt-lg-0"> <!-- mt-4 mt-lg-0 : marge en haut sur mobile seulement -->
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-4">
+                            <!-- Titre avec icône -->
                             <h4 class="fw-bold text-warning mb-3">
-                                <i class="fas fa-file-alt me-2"></i>Documents nécessaires
+                                <i class="fas fa-file-alt me-2"></i> <!-- Icône de dossier -->
+                                Documents nécessaires
                             </h4>
+                            <!-- Liste des documents -->
                             <ul class="list-group list-group-flush">
+                                <!-- Document 1 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-file-pdf text-danger me-2"></i>Formulaire de candidature dûment
-                                    rempli
+                                    <i class="fas fa-file-pdf text-danger me-2"></i> <!-- Icône PDF rouge -->
+                                    Formulaire de candidature dûment rempli
                                 </li>
+                                <!-- Document 2 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-id-card text-danger me-2"></i>Copie certifiée de la CNI
+                                    <i class="fas fa-id-card text-danger me-2"></i> <!-- Icône carte d'identité -->
+                                    Copie certifiée de la CNI
                                 </li>
+                                <!-- Document 3 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-home text-danger me-2"></i>Attestation de résidence
+                                    <i class="fas fa-home text-danger me-2"></i> <!-- Icône maison -->
+                                    Attestation de résidence
                                 </li>
+                                <!-- Document 4 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-gavel text-danger me-2"></i>Casier judiciaire
+                                    <i class="fas fa-gavel text-danger me-2"></i> <!-- Icône marteau de justice -->
+                                    Casier judiciaire
                                 </li>
+                                <!-- Document 5 -->
                                 <li class="list-group-item border-0">
-                                    <i class="fas fa-camera text-danger me-2"></i>Photos d'identité récentes
+                                    <i class="fas fa-camera text-danger me-2"></i> <!-- Icône appareil photo -->
+                                    Photos d'identité récentes
                                 </li>
                             </ul>
                         </div>
@@ -333,41 +445,51 @@
                 </div>
             </div>
 
-            <div class="alert alert-warning" role="alert">
+            <!-- Message d'alerte important -->
+            <div class="alert alert-warning" role="alert"> <!-- alert-warning : alerte jaune -->
+                <!-- Titre de l'alerte avec icône -->
                 <h5 class="alert-heading">
-                    <i class="fas fa-exclamation-triangle me-2"></i>Important
+                    <i class="fas fa-exclamation-triangle me-2"></i> <!-- Icône triangle d'avertissement -->
+                    Important
                 </h5>
+                <!-- Texte de l'alerte -->
                 <p class="mb-0">
                     Le dépôt de candidature doit être effectué dans les délais légaux. Consultez le calendrier électoral
                     pour les dates limites.
                 </p>
             </div>
 
+            <!-- Bouton pour déposer une candidature -->
             <div class="text-center mt-4">
                 <a href="candidats.html" class="btn btn-warning btn-lg rounded-pill px-4">
-                    <i class="fas fa-user-tie me-2"></i>Déposer ma candidature
+                    <i class="fas fa-user-tie me-2"></i> <!-- Icône de cravate -->
+                    Déposer ma candidature
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- GUIDE RÉSULTATS -->
-    <section class="bg-light py-5" id="resultats">
+    <!-- SECTION : GUIDE RÉSULTATS -->
+    <section class="bg-light py-5" id="resultats"> <!-- id="resultats" pour les liens internes -->
         <div class="container">
+            <!-- Titre de la section -->
             <div class="text-center mb-5">
                 <span class="badge bg-danger fs-6 mb-3">Transparence</span>
                 <h2 class="fw-bold mb-3">Consulter les résultats électoraux</h2>
                 <p class="text-muted">Accédez aux résultats officiels en toute transparence</p>
             </div>
 
+            <!-- Contenu principal centré -->
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-8 mx-auto"> <!-- mx-auto : centre horizontalement -->
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-4">
-                            <div class="d-flex align-items-start mb-4">
+                            <!-- En-tête avec icône -->
+                            <div class="d-flex align-items-start mb-4"> <!-- mb-4 : marge basse -->
+                                <!-- Cercle rouge avec icône -->
                                 <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3"
                                     style="width: 50px; height: 50px;">
-                                    <i class="fas fa-chart-bar"></i>
+                                    <i class="fas fa-chart-bar"></i> <!-- Icône de graphique -->
                                 </div>
                                 <div>
                                     <h4 class="fw-bold">Navigation dans les résultats</h4>
@@ -378,21 +500,28 @@
                                 </div>
                             </div>
 
-                            <div class="row g-3">
+                            <!-- Grille de 4 fonctionnalités -->
+                            <div class="row g-3"> <!-- g-3 : espacement entre les colonnes -->
+                                <!-- Fonctionnalité 1 : Filtrage -->
                                 <div class="col-md-6">
-                                    <div class="border rounded p-3 h-100">
+                                    <div class="border rounded p-3 h-100"> <!-- h-100 : même hauteur -->
+                                        <!-- Titre avec icône -->
                                         <h5 class="fw-bold">
-                                            <i class="fas fa-filter text-danger me-2"></i>Filtrage
+                                            <i class="fas fa-filter text-danger me-2"></i> <!-- Icône de filtre -->
+                                            Filtrage
                                         </h5>
                                         <p class="mb-0">
                                             Filtrez les résultats par type d'élection, région, département ou commune.
                                         </p>
                                     </div>
                                 </div>
+
+                                <!-- Fonctionnalité 2 : Tableaux -->
                                 <div class="col-md-6">
                                     <div class="border rounded p-3 h-100">
                                         <h5 class="fw-bold">
-                                            <i class="fas fa-table text-danger me-2"></i>Tableaux
+                                            <i class="fas fa-table text-danger me-2"></i> <!-- Icône de tableau -->
+                                            Tableaux
                                         </h5>
                                         <p class="mb-0">
                                             Consultez les données sous forme de tableaux détaillés avec pourcentages et
@@ -400,10 +529,14 @@
                                         </p>
                                     </div>
                                 </div>
+
+                                <!-- Fonctionnalité 3 : Graphiques -->
                                 <div class="col-md-6">
                                     <div class="border rounded p-3 h-100">
                                         <h5 class="fw-bold">
-                                            <i class="fas fa-chart-pie text-danger me-2"></i>Graphiques
+                                            <i class="fas fa-chart-pie text-danger me-2"></i>
+                                            <!-- Icône de camembert -->
+                                            Graphiques
                                         </h5>
                                         <p class="mb-0">
                                             Visualisez les résultats avec des graphiques interactifs (camembert,
@@ -411,10 +544,14 @@
                                         </p>
                                     </div>
                                 </div>
+
+                                <!-- Fonctionnalité 4 : Téléchargement -->
                                 <div class="col-md-6">
                                     <div class="border rounded p-3 h-100">
                                         <h5 class="fw-bold">
-                                            <i class="fas fa-download text-danger me-2"></i>Téléchargement
+                                            <i class="fas fa-download text-danger me-2"></i>
+                                            <!-- Icône de téléchargement -->
+                                            Téléchargement
                                         </h5>
                                         <p class="mb-0">
                                             Téléchargez les résultats complets au format PDF ou Excel pour analyse.
@@ -423,9 +560,10 @@
                                 </div>
                             </div>
 
-                            <div class="mt-4">
-                                <div class="alert alert-info" role="alert">
-                                    <i class="fas fa-info-circle me-2"></i>
+                            <!-- Message d'information -->
+                            <div class="mt-4"> <!-- mt-4 : marge en haut -->
+                                <div class="alert alert-info" role="alert"> <!-- alert-info : alerte bleue -->
+                                    <i class="fas fa-info-circle me-2"></i> <!-- Icône d'information -->
                                     Les résultats sont publiés progressivement au fur et à mesure du dépouillement.
                                     Actualisez la page pour voir les dernières mises à jour.
                                 </div>
@@ -435,38 +573,49 @@
                 </div>
             </div>
 
+            <!-- Bouton pour voir les résultats -->
             <div class="text-center mt-4">
                 <a href="resultats.html" class="btn btn-danger btn-lg rounded-pill px-4">
-                    <i class="fas fa-poll me-2"></i>Voir les résultats
+                    <i class="fas fa-poll me-2"></i> <!-- Icône de sondage -->
+                    Voir les résultats
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="py-5" id="faq">
+    <!-- SECTION : FAQ (Foire Aux Questions) -->
+    <section class="py-5" id="faq"> <!-- id="faq" pour les liens internes -->
         <div class="container">
+            <!-- Titre de la section -->
             <div class="text-center mb-5">
                 <span class="badge bg-primary fs-6 mb-3">Questions fréquentes</span>
                 <h2 class="fw-bold mb-3">Foire Aux Questions</h2>
                 <p class="text-muted">Trouvez rapidement des réponses à vos questions</p>
             </div>
 
+            <!-- Conteneur des questions -->
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="accordion" id="faqAccordion">
-                        <!-- Question 1 -->
-                        <div class="accordion-item border rounded mb-3">
+                <div class="col-lg-8 mx-auto"> <!-- mx-auto : centre horizontalement -->
+                    <!-- Accordéon Bootstrap : système de pliage/dépliage -->
+                    <div class="accordion" id="faqAccordion"> <!-- id pour le JavaScript -->
+
+                        <!-- QUESTION 1 -->
+                        <div class="accordion-item border rounded mb-3"> <!-- mb-3 : marge basse entre les questions -->
+                            <!-- En-tête de la question -->
                             <h2 class="accordion-header">
+                                <!-- Bouton qui déclenche l'ouverture/fermeture -->
                                 <button class="accordion-button collapsed fw-bold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <!-- Icône et texte de la question -->
                                     <i class="fas fa-question-circle text-primary me-2"></i>
                                     Comment vérifier si je suis déjà inscrit sur les listes électorales ?
                                 </button>
                             </h2>
+                            <!-- Contenu de la réponse (masqué par défaut) -->
                             <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <p>Vous pouvez vérifier votre inscription électorale en :</p>
+                                    <!-- Liste numérotée des solutions -->
                                     <ol>
                                         <li>Vous connectant à votre compte sur notre plateforme</li>
                                         <li>Consultant la section "Mon statut électoral"</li>
@@ -476,7 +625,7 @@
                             </div>
                         </div>
 
-                        <!-- Question 2 -->
+                        <!-- QUESTION 2 -->
                         <div class="accordion-item border rounded mb-3">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
@@ -490,12 +639,13 @@
                                     <p>Les inscriptions électorales sont permanentes mais doivent être faites au moins
                                         <strong>90 jours avant une élection</strong> pour pouvoir voter à cette
                                         élection. Consultez notre calendrier électoral pour les dates limites
-                                        spécifiques.</p>
+                                        spécifiques.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Question 3 -->
+                        <!-- QUESTION 3 -->
                         <div class="accordion-item border rounded mb-3">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
@@ -517,7 +667,7 @@
                             </div>
                         </div>
 
-                        <!-- Question 4 -->
+                        <!-- QUESTION 4 -->
                         <div class="accordion-item border rounded mb-3">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
@@ -536,7 +686,7 @@
                             </div>
                         </div>
 
-                        <!-- Question 5 -->
+                        <!-- QUESTION 5 -->
                         <div class="accordion-item border rounded mb-3">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
@@ -548,6 +698,7 @@
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <p>Après soumission d'une candidature :</p>
+                                    <!-- Liste à puces -->
                                     <ul>
                                         <li>Les modifications mineures (coordonnées) peuvent être faites jusqu'à 7 jours
                                             après soumission</li>
@@ -559,57 +710,70 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- Fin de l'accordéon -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- SECTION : CONTACT ET ASSISTANCE -->
     <section class="bg-dark text-white py-5">
         <div class="container">
+            <!-- Titre de la section -->
             <div class="text-center mb-5">
                 <span class="badge bg-warning text-dark fs-6 mb-3">Assistance</span>
                 <h2 class="fw-bold mb-3">Besoin d'aide supplémentaire ?</h2>
                 <p class="lead">Notre équipe est à votre disposition</p>
             </div>
 
-            <div class="row g-4">
+            <!-- Grille de 3 cartes de contact -->
+            <div class="row g-4"> <!-- g-4 : espacement entre les cartes -->
+
+                <!-- CARTE 1 : Téléphone -->
                 <div class="col-md-4">
-                    <div class="card bg-primary text-white border-0 h-100">
+                    <div class="card bg-primary text-white border-0 h-100"> <!-- bg-primary : fond bleu -->
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-phone-alt display-4 mb-3"></i>
+                            <!-- Grande icône de téléphone -->
+                            <i class="fas fa-phone-alt display-4 mb-3"></i> <!-- display-4 : très grande taille -->
                             <h4 class="card-title fw-bold">Téléphone</h4>
                             <p class="card-text">Appelez notre centre d'assistance</p>
-                            <a href="tel:+2376XXXXXX" class="btn btn-light rounded-pill">+237 699 000 000</a>
+                            <!-- Bouton avec numéro de téléphone -->
+                            <a href="tel:+237699 000 000" class="btn btn-light rounded-pill">+237 699 000 000</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- CARTE 2 : Email -->
                 <div class="col-md-4">
-                    <div class="card bg-success text-white border-0 h-100">
+                    <div class="card bg-success text-white border-0 h-100"> <!-- bg-success : fond vert -->
                         <div class="card-body text-center p-4">
+                            <!-- Grande icône d'enveloppe -->
                             <i class="fas fa-envelope display-4 mb-3"></i>
                             <h4 class="card-title fw-bold">Email</h4>
                             <p class="card-text">Écrivez-nous pour toute question</p>
+                            <!-- Bouton avec adresse email -->
                             <a href="mailto:assistance@elections.cm"
                                 class="btn btn-light rounded-pill">assistance@elections.cm</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- CARTE 3 : Centres physiques -->
                 <div class="col-md-4">
-                    <div class="card bg-warning text-dark border-0 h-100">
+                    <div class="card bg-warning text-dark border-0 h-100"> <!-- bg-warning : fond jaune -->
                         <div class="card-body text-center p-4">
+                            <!-- Grande icône de localisation -->
                             <i class="fas fa-map-marker-alt display-4 mb-3"></i>
                             <h4 class="card-title fw-bold">Centres Élections CM</h4>
                             <p class="card-text">Rendez-vous dans nos centres</p>
+                            <!-- Bouton pour trouver un centre -->
                             <a href="#" class="btn btn-dark rounded-pill">Trouver un centre</a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Informations supplémentaires -->
             <div class="text-center mt-5">
                 <p class="mb-3">Horaires d'ouverture : Lundi - Vendredi, 8h00 - 17h00</p>
                 <p class="small">Temps de réponse moyen : 24 heures</p>
@@ -617,31 +781,41 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- SECTION FOOTER : sera chargée depuis un fichier séparé (footer.html) -->
     <div id="footer"></div>
 
-    <!-- Bootstrap JS -->
+    <!-- Importation des fichiers JavaScript -->
+    <!-- Bootstrap JavaScript : pour les fonctionnalités interactives (accordéon, menus, etc.) -->
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Notre fichier JavaScript personnalisé -->
     <script src="assets/js/app.js"></script>
 
-    <!-- Script pour les accordéons -->
+    <!-- Script JavaScript spécifique pour cette page -->
     <script>
-        // Script simple pour les accordéons (géré par Bootstrap)
+        // Attendre que le document soit entièrement chargé
         document.addEventListener('DOMContentLoaded', function () {
-            // Ajout d'une fonctionnalité pour garder une FAQ ouverte au chargement si hash présent
+            // Récupérer l'identifiant dans l'URL (ex: #inscription)
             const hash = window.location.hash;
+
+            // Si un identifiant est présent dans l'URL
             if (hash) {
+                // Chercher l'élément correspondant dans le document
                 const element = document.querySelector(hash);
+
+                // Si l'élément existe et est un accordéon (FAQ)
                 if (element && element.classList.contains('accordion-collapse')) {
+                    // Attendre un peu que la page se charge
                     setTimeout(() => {
+                        // Ouvrir l'accordéon correspondant
                         const bsCollapse = new bootstrap.Collapse(element, {
-                            toggle: true
+                            toggle: true // Change l'état (ouvert/fermé)
                         });
-                    }, 100);
+                    }, 100); // Délai de 100 millisecondes
                 }
             }
         });
     </script>
-</body>
+</body> <!-- Fin du corps du document -->
 
-</html>
+</html> <!-- Fin du document HTML -->

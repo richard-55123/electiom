@@ -1,61 +1,106 @@
+<!-- Déclaration du type de document : ce fichier est une page HTML5 -->
 <!DOCTYPE html>
+
+<!-- Début du document HTML, la langue principale est le français -->
 <html lang="fr">
 
+<!-- Section d'en-tête : contient les informations techniques et métadonnées -->
+
 <head>
+    <!-- Définition de l'encodage des caractères pour afficher correctement les accents -->
     <meta charset="UTF-8">
+
+    <!-- Balise pour le design responsive : la page s'adapte à la taille de l'écran -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
     <title>Vote – ÉLECTIONS CM</title>
+
+    <!-- FAVICON : petite icône qui apparaît à côté du titre dans l'onglet -->
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- GOOGLE FONTS -->
+    <!-- Importation de la police Montserrat depuis Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Importation des feuilles de style CSS -->
+    <!-- Bootstrap CSS : bibliothèque pour faciliter le design et la mise en page -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Notre feuille de style personnalisée -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Style CSS intégré directement dans la page -->
     <style>
+        /* Style général du corps de la page */
         body {
             background: #f2f4f7;
+            /* Couleur de fond gris clair */
             font-family: "Montserrat", sans-serif;
+            /* Police d'écriture */
         }
 
+        /* Style pour les cartes des candidats */
         .candidate-card {
             transition: 0.3s;
+            /* Animation de 0.3 seconde pour les effets */
         }
 
+        /* Effet quand on survole une carte avec la souris */
         .candidate-card:hover {
             transform: scale(1.02);
+            /* Agrandit légèrement la carte (2%) */
         }
 
+        /* Style pour les photos des candidats */
         .candidate-photo {
             height: 150px;
+            /* Hauteur fixe */
             width: 150px;
+            /* Largeur fixe */
             object-fit: cover;
+            /* Recadre l'image pour remplir le cadre */
             border-radius: 100px;
+            /* Rend l'image circulaire (100px = 50% de 150px) */
             border: 3px solid #ffc107;
+            /* Bordure jaune de 3px */
         }
     </style>
 </head>
 
+<!-- Corps du document : contenu visible par les visiteurs -->
+
 <body>
 
-    <!-- HEADER -->
+    <!-- SECTION HEADER : chargée depuis un fichier séparé -->
     <div id="header"></div>
 
-    <div class="container py-5">
+    <!-- SECTION PRINCIPALE : conteneur pour le contenu de vote -->
+    <div class="container py-5"> <!-- py-5 : padding vertical important -->
 
+        <!-- Titre principal de la page -->
         <h2 class="text-center fw-bold mb-4">Votez pour votre candidat</h2>
+
+        <!-- Sous-titre avec instructions -->
         <p class="text-center text-muted mb-5">Vous ne pouvez voter qu'une seule fois.</p>
 
-        <div class="row g-4">
+        <!-- Grille de cartes des candidats (3 colonnes sur écran moyen) -->
+        <div class="row g-4"> <!-- g-4 : espacement entre les cartes -->
 
             <!-- CANDIDAT 1 -->
-            <div class="col-md-4">
+            <div class="col-md-4"> <!-- Prend 4 colonnes sur 12 sur écran moyen -->
+                <!-- Carte du candidat -->
                 <div class="card candidate-card shadow-sm border-0 text-center p-4">
+                    <!-- Photo du candidat -->
                     <img src="assets/images/candidats/c1.jpg" class="candidate-photo mx-auto mb-3">
+
+                    <!-- Nom du candidat -->
                     <h4 class="fw-bold">Jean Dupont</h4>
+
+                    <!-- Parti politique -->
                     <p class="text-muted">Parti Unifié National</p>
+
+                    <!-- Bouton pour voter pour ce candidat -->
+                    <!-- data-name : attribut personnalisé qui stocke le nom du candidat -->
                     <button class="btn btn-success w-100 fw-bold vote-btn" data-name="Jean Dupont">
                         Voter
                     </button>
@@ -86,46 +131,63 @@
                 </div>
             </div>
 
-        </div>
+        </div> <!-- Fin de la ligne des candidats -->
 
-    </div>
+    </div> <!-- Fin du conteneur principal -->
 
-    <!-- FOOTER -->
+    <!-- SECTION FOOTER : chargée depuis un fichier séparé -->
     <div id="footer"></div>
 
+    <!-- Importation des fichiers JavaScript -->
+    <!-- Bootstrap JavaScript : pour les fonctionnalités interactives -->
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Notre fichier JavaScript personnalisé -->
     <script src="assets/js/app.js"></script>
 
-    <!-- SCRIPT POUR LE VOTE -->
+    <!-- Script JavaScript spécifique pour la fonctionnalité de vote -->
     <script>
+        // Récupère TOUS les boutons avec la classe "vote-btn"
         const voteButtons = document.querySelectorAll(".vote-btn");
 
+        // Pour chaque bouton de vote, on ajoute un "écouteur d'événements"
         voteButtons.forEach(btn => {
+            // Quand on clique sur le bouton, exécute cette fonction
             btn.addEventListener("click", function () {
 
-                // Vérifier si l'utilisateur a déjà voté
+                // VÉRIFICATION : est-ce que l'utilisateur a déjà voté ?
+                // localStorage est une mémoire locale du navigateur
                 if (localStorage.getItem("aDejaVote")) {
+                    // Si oui, affiche une alerte et arrête le script
                     alert("Vous avez déjà voté !\nIl n'est pas possible de voter deux fois.");
-                    return;
+                    return; // Arrête l'exécution ici
                 }
 
+                // Récupère le nom du candidat depuis l'attribut "data-name"
                 const candidat = this.getAttribute("data-name");
 
-                // Confirmation du vote
+                // DEMANDE DE CONFIRMATION : fenêtre popup avec choix Oui/Non
                 const confirmation = confirm("Confirmez-vous votre vote pour : " + candidat + " ?");
 
+                // Si l'utilisateur clique sur "OK" (confirme son vote)
                 if (confirmation) {
 
-                    // Marquer l'utilisateur comme ayant voté
+                    // ENREGISTREMENT DU VOTE dans la mémoire locale du navigateur
+
+                    // 1. Marque que l'utilisateur a déjà voté
                     localStorage.setItem("aDejaVote", "oui");
+
+                    // 2. Enregistre pour quel candidat il a voté
                     localStorage.setItem("votePour", candidat);
 
+                    // Affiche un message de succès
                     alert("Votre vote pour " + candidat + " a été enregistré avec succès !");
                 }
+                // Si l'utilisateur clique sur "Annuler", rien ne se passe
             });
         });
     </script>
 
-</body>
+</body> <!-- Fin du corps du document -->
 
-</html>
+</html> <!-- Fin du document HTML -->

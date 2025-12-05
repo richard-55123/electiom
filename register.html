@@ -1,87 +1,142 @@
+<!-- Déclaration du type de document : ce fichier est une page HTML5 -->
 <!DOCTYPE html>
+
+<!-- Début du document HTML, la langue principale est le français -->
 <html lang="fr">
 
+<!-- Section d'en-tête : contient les informations techniques et métadonnées -->
+
 <head>
+    <!-- Définition de l'encodage des caractères : UTF-8 permet d'afficher les accents et caractères spéciaux -->
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+
+    <!-- CORRECTION : "viewport" au lieu de "viewport" -->
+    <!-- Balise pour le design responsive : s'adapte à la taille de l'écran du dispositif -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
     <title>S'inscrire – ÉLECTIONS CM</title>
+
+    <!-- FAVICON : petite icône qui apparaît à côté du titre dans l'onglet du navigateur -->
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- GOOGLE FONTS -->
+    <!-- Importation des polices d'écriture depuis Google Fonts -->
+    <!-- Deux polices sont importées : Montserrat et Open Sans -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Importation des feuilles de style CSS -->
+    <!-- Bootstrap CSS : bibliothèque qui facilite la mise en page et le design -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Notre feuille de style personnalisée pour les modifications spécifiques -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Style CSS intégré directement dans la page (pour les styles spécifiques à cette page) -->
     <style>
+        /* Style général du corps de la page */
         body {
             background: #eef0f4;
+            /* Couleur de fond gris bleuté très clair */
             font-family: "Open Sans", sans-serif;
+            /* Police d'écriture principale */
         }
 
+        /* Style pour la carte d'inscription (container principal) */
         .register-card {
             max-width: 520px;
+            /* Largeur maximale de 520 pixels (plus large que la page de connexion) */
             margin: 60px auto;
+            /* Marge de 60px en haut/bas et centrage horizontal automatique */
         }
     </style>
 </head>
 
+<!-- Corps du document : tout le contenu visible par les visiteurs -->
+
 <body>
 
-    <!-- HEADER -->
+    <!-- SECTION HEADER : sera chargée depuis un fichier séparé (header.html) -->
+    <!-- Cette div vide sera remplie par JavaScript avec le contenu du header -->
     <div id="header"></div>
 
-    <section class="py-5">
-        <div class="container">
+    <!-- SECTION PRINCIPALE : formulaire d'inscription -->
+    <section class="py-5"> <!-- py-5 : padding vertical important (espacement haut et bas) -->
+        <div class="container"> <!-- Conteneur pour centrer le contenu et limiter sa largeur -->
 
+            <!-- Carte d'inscription (div principale) -->
             <div class="register-card">
-                <div class="card shadow border-0 p-4">
+                <!-- Carte Bootstrap avec ombre et sans bordure visible -->
+                <div class="card shadow border-0 p-4"> <!-- p-4 : padding interne -->
 
+                    <!-- Titre de la carte -->
                     <h3 class="text-center fw-bold mb-3">Créer un compte</h3>
+
+                    <!-- Sous-titre -->
                     <p class="text-center text-muted mb-4">Inscription pour accéder à la plateforme électorale</p>
 
-                    <!-- AJOUT : ID DU FORMULAIRE -->
-                    <form id="registerForm">
+                    <!-- Début du formulaire d'inscription avec un ID pour le JavaScript -->
+                    <form id="registerForm"> <!-- id="registerForm" permet au JavaScript d'identifier ce formulaire -->
 
-                        <!-- NOM + PRENOM -->
-                        <div class="row g-3">
-                            <div class="col-md-6">
+                        <!-- LIGNE 1 : Nom + Prénom (2 colonnes côte à côte) -->
+                        <div class="row g-3"> <!-- g-3 : espacement entre les colonnes -->
+                            <!-- Colonne gauche : Nom -->
+                            <div class="col-md-6"> <!-- Prend 6 colonnes sur 12 sur écran moyen, 12 sur mobile -->
                                 <label class="form-label fw-semibold">Nom</label>
+                                <!-- Champ de saisie pour le nom -->
                                 <input type="text" class="form-control form-control-lg" required>
+                                <!-- Explications :
+                                    - type="text" : champ texte standard
+                                    - form-control form-control-lg : champ Bootstrap de grande taille
+                                    - required : champ obligatoire
+                                -->
                             </div>
 
+                            <!-- Colonne droite : Prénom -->
                             <div class="col-md-6">
                                 <label class="form-label fw-semibold">Prénom</label>
                                 <input type="text" class="form-control form-control-lg" required>
                             </div>
                         </div>
 
-                        <!-- AGE -->
-                        <div class="mt-3">
+                        <!-- CHAMP 2 : Âge -->
+                        <div class="mt-3"> <!-- mt-3 : marge en haut -->
                             <label class="form-label fw-semibold">Âge</label>
+                            <!-- Champ numérique avec limites -->
                             <input type="number" class="form-control form-control-lg" min="18" max="120"
                                 placeholder="18+" required>
+                            <!-- Explications :
+                                - type="number" : n'accepte que des chiffres
+                                - min="18" : valeur minimum 18 ans (âge légal pour voter)
+                                - max="120" : valeur maximum 120 ans
+                                - placeholder="18+" : indique qu'il faut avoir au moins 18 ans
+                                - required : champ obligatoire
+                            -->
                         </div>
 
-                        <!-- SEXE -->
+                        <!-- CHAMP 3 : Sexe (liste déroulante) -->
                         <div class="mt-3">
                             <label class="form-label fw-semibold">Sexe</label>
+                            <!-- Menu déroulant pour choisir le sexe -->
                             <select class="form-select form-select-lg" required>
+                                <!-- Option par défaut (désactivée et sélectionnée) -->
                                 <option value="" disabled selected>Choisir</option>
+                                <!-- Option 1 -->
                                 <option>Homme</option>
+                                <!-- Option 2 -->
                                 <option>Femme</option>
+                                <!-- Option 3 -->
                                 <option>Autre</option>
                             </select>
                         </div>
 
-                        <!-- REGION -->
+                        <!-- CHAMP 4 : Région (liste déroulante) -->
                         <div class="mt-3">
                             <label class="form-label fw-semibold">Région</label>
                             <select class="form-select form-select-lg" required>
                                 <option value="" disabled selected>Choisir une région</option>
+                                <!-- Liste des 10 régions du Cameroun -->
                                 <option>Adamaoua</option>
                                 <option>Centre</option>
                                 <option>Est</option>
@@ -95,63 +150,97 @@
                             </select>
                         </div>
 
-                        <!-- EMAIL -->
+                        <!-- CHAMP 5 : Email -->
                         <div class="mt-3">
                             <label class="form-label fw-semibold">Email</label>
                             <input type="email" class="form-control form-control-lg" required>
                         </div>
 
-                        <!-- MOT DE PASSE -->
+                        <!-- CHAMP 6 : Mot de passe -->
                         <div class="mt-3">
                             <label class="form-label fw-semibold">Mot de passe</label>
+                            <!-- Champ masqué pour le mot de passe -->
                             <input type="password" class="form-control form-control-lg" required>
                         </div>
 
-                        <!-- CONFIRM MDP -->
-                        <div class="mt-3 mb-4">
+                        <!-- CHAMP 7 : Confirmation du mot de passe -->
+                        <div class="mt-3 mb-4"> <!-- mb-4 : marge basse importante -->
                             <label class="form-label fw-semibold">Confirmer le mot de passe</label>
                             <input type="password" class="form-control form-control-lg" required>
+                            <!-- Important : Dans un vrai système, il faudrait vérifier que les 2 mots de passe sont identiques -->
                         </div>
 
-                        <!-- BOUTON -->
+                        <!-- BOUTON D'INSCRIPTION -->
                         <button class="btn btn-warning btn-lg w-100 fw-bold rounded-pill">
                             Créer mon compte
                         </button>
+                        <!-- Explications :
+                            - btn-warning : bouton jaune (couleur d'avertissement/action)
+                            - btn-lg : bouton de grande taille
+                            - w-100 : prend 100% de la largeur disponible
+                            - fw-bold : texte en gras
+                            - rounded-pill : coins très arrondis (forme de pilule)
+                        -->
 
-                        <hr class="my-4">
+                        <!-- SÉPARATEUR VISUEL -->
+                        <hr class="my-4"> <!-- my-4 : marge verticale en haut et en bas -->
 
-                        <p class="text-center mb-0">
+                        <!-- LIEN VERS LA PAGE DE CONNEXION -->
+                        <p class="text-center mb-0"> <!-- mb-0 : pas de marge basse -->
                             Déjà inscrit ?
+                            <!-- Lien vers la page de connexion -->
                             <a href="login.html" class="fw-bold text-success">Se connecter</a>
+                            <!-- Explications :
+                                - href="login.html" : lien vers la page de connexion
+                                - fw-bold text-success : texte en gras et couleur verte
+                            -->
                         </p>
 
-                    </form>
+                    </form> <!-- Fin du formulaire -->
 
-                </div>
-            </div>
+                </div> <!-- Fin de la carte -->
+            </div> <!-- Fin du conteneur register-card -->
 
-        </div>
-    </section>
+        </div> <!-- Fin du container Bootstrap -->
+    </section> <!-- Fin de la section -->
 
-    <!-- FOOTER -->
+    <!-- SECTION FOOTER : sera chargée depuis un fichier séparé (footer.html) -->
     <div id="footer"></div>
 
+    <!-- Importation des fichiers JavaScript -->
+    <!-- Bootstrap JavaScript : pour les fonctionnalités interactives -->
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Notre fichier JavaScript personnalisé -->
     <script src="assets/js/app.js"></script>
 
-    <!-- SCRIPT POUR AFFICHER L'IDENTIFIANT UNIQUE -->
+    <!-- Script JavaScript spécifique pour cette page -->
     <script>
+        // Sélectionne le formulaire par son ID et ajoute un "écouteur d'événements"
         document.getElementById("registerForm").addEventListener("submit", function (e) {
-            e.preventDefault(); // Empêche l'envoi du formulaire
+            // Empêche le comportement par défaut du formulaire (rechargement de la page)
+            e.preventDefault();
 
             // Génération d'un identifiant unique simple
+            // "CM-" suivi d'un nombre aléatoire entre 1,000,000 et 9,999,999
             const uniqueId = "CM-" + Math.floor(Math.random() * 9000000 + 1000000);
+            /* Explications de la génération :
+               - Math.random() : génère un nombre aléatoire entre 0 et 1 (ex: 0.5632)
+               - * 9000000 : multiplie par 9,000,000 (ex: 0.5632 * 9,000,000 = 5,068,800)
+               - + 1000000 : ajoute 1,000,000 (ex: 5,068,800 + 1,000,000 = 6,068,800)
+               - Math.floor() : arrondit à l'entier inférieur (ex: 6,068,800)
+               - "CM-" + : ajoute le préfixe "CM-" (ex: "CM-6068800")
+            */
 
-            // Affichage dans une boite de dialogue
+            // Affiche une boîte de dialogue avec le message de succès et l'identifiant
             alert("Votre inscription a été effectuée avec succès !\n\nVotre identifiant unique est : " + uniqueId);
+            /* Explications de l'alerte :
+               - "\n\n" : saute deux lignes dans le message
+               - + uniqueId : concatène (assemble) le texte et l'identifiant
+            */
         });
     </script>
 
-</body>
+</body> <!-- Fin du corps du document -->
 
-</html>
+</html> <!-- Fin du document HTML -->

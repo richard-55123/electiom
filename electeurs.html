@@ -1,117 +1,168 @@
+<!-- Déclaration du type de document : ce fichier est une page HTML5 -->
 <!DOCTYPE html>
+
+<!-- Début du document HTML, la langue principale est le français (lang="fr") -->
 <html lang="fr">
 
+<!-- Section d'en-tête : contient les informations techniques et métadonnées -->
+
 <head>
+    <!-- Définition de l'encodage des caractères : UTF-8 permet d'afficher les accents et caractères spéciaux -->
     <meta charset="UTF-8">
+
+    <!-- Balise pour le design responsive : s'adapte automatiquement à la taille de l'écran -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
     <title>Devenir Électeur aux Élections – Cameroun</title>
 
-    <!-- FAVICON -->
+    <!-- FAVICON : petite icône qui apparaît à côté du titre dans l'onglet du navigateur -->
     <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
 
-    <!-- Google Fonts -->
+    <!-- Importation des polices d'écriture depuis Google Fonts (service gratuit de Google) -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Importation des feuilles de style CSS -->
+    <!-- Bootstrap CSS : bibliothèque qui facilite la mise en page et le design -->
     <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Notre feuille de style personnalisée pour les modifications spécifiques -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
+<!-- Corps du document : tout le contenu visible par les visiteurs -->
+<!-- Style en ligne : ajoute une image de fond avec des propriétés spécifiques -->
 
 <body
     style="background-image: url('/assets/images/About.png'); background-size: cover; background-position: center; background-attachment: fixed;">
 
+    <!-- Emplacement où sera chargé l'en-tête du site (depuis un fichier séparé) -->
+    <!-- L'en-tête contient généralement le logo, le menu de navigation, etc. -->
     <div id="header"></div>
 
+    <!-- Section 1 : Bannière d'introduction avec un fond sombre semi-transparent -->
     <section class="bg-dark bg-opacity-75 text-white py-5 text-center">
+        <!-- Container : conteneur qui centre le contenu et limite sa largeur -->
         <div class="container">
+            <!-- Badge/étiquette jaune avec le drapeau camerounais et le texte -->
             <span class="badge bg-warning mb-3">🇨🇲 Inscription Électeur</span>
+
+            <!-- Titre principal de la page -->
             <h1 class="fw-bold">Devenir Électeur aux Élections</h1>
+
+            <!-- Paragraphe de description sous le titre -->
             <p class="lead mt-3">
                 Cette inscription doit respecter les exigences officielles en vigueur au Cameroun.
             </p>
         </div>
     </section>
 
-    <section class="py-5">
+    <!-- Section 2 : Formulaire d'inscription -->
+    <section class="py-5"> <!-- py-5 : padding vertical (espacement en haut et en bas) -->
         <div class="container">
+            <!-- Row : ligne qui contient des colonnes, centrée horizontalement -->
             <div class="row justify-content-center">
 
+                <!-- Colonne principale : prend 9 colonnes sur 12 sur grand écran, 12/12 sur mobile -->
                 <div class="col-12 col-lg-9">
+                    <!-- Card : carte blanche avec ombre qui contient le formulaire -->
                     <div class="card shadow">
+                        <!-- Corps de la carte avec padding interne -->
                         <div class="card-body p-4">
 
-                            <h3 class="fw-bold text-center mb-4">Formulaire Officiel d’Inscription Électeur</h3>
+                            <!-- Titre du formulaire -->
+                            <h3 class="fw-bold text-center mb-4">Formulaire Officiel d'Inscription Électeur</h3>
 
+                            <!-- Début du formulaire (balise form) -->
                             <form>
 
-                                <!-- IDENTITÉ -->
+                                <!-- SECTION 1 : INFORMATIONS PERSONNELLES -->
                                 <h5 class="fw-bold mb-3">1. Informations personnelles</h5>
+
+                                <!-- Ligne 1.1 : Nom et Prénom -->
                                 <div class="row g-3 mb-3">
+                                    <!-- Colonne pour le Nom (6 colonnes sur écran moyen) -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Nom *</label>
+                                        <!-- Champ de saisie pour le nom (obligatoire) -->
                                         <input type="text" class="form-control" required>
                                     </div>
+                                    <!-- Colonne pour le Prénom (6 colonnes sur écran moyen) -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Prénom *</label>
                                         <input type="text" class="form-control" required>
                                     </div>
                                 </div>
 
+                                <!-- Ligne 1.2 : Sexe, Date de naissance, Nationalité -->
                                 <div class="row g-3 mb-3">
+                                    <!-- Colonne pour le Sexe (4 colonnes sur écran moyen) -->
                                     <div class="col-12 col-md-4">
                                         <label class="form-label">Sexe *</label>
+                                        <!-- Liste déroulante pour choisir le sexe -->
                                         <select class="form-select" required>
-                                            <option selected disabled>Choisir</option>
+                                            <option selected disabled>Choisir</option> <!-- Option par défaut -->
                                             <option>Homme</option>
                                             <option>Femme</option>
                                         </select>
                                     </div>
+                                    <!-- Colonne pour la Date de naissance -->
                                     <div class="col-12 col-md-4">
                                         <label class="form-label">Date de naissance *</label>
+                                        <!-- Sélecteur de date avec calendrier -->
                                         <input type="date" class="form-control" required>
                                     </div>
+                                    <!-- Colonne pour la Nationalité -->
                                     <div class="col-12 col-md-4">
                                         <label class="form-label">Nationalité *</label>
+                                        <!-- Champ pré-rempli et en lecture seule -->
                                         <input type="text" class="form-control" value="Camerounaise" readonly>
                                     </div>
                                 </div>
 
-                                <!-- CNI -->
-                                <h5 class="fw-bold mt-4 mb-3">2. Carte Nationale d’Identité</h5>
+                                <!-- SECTION 2 : CARTE NATIONALE D'IDENTITÉ (CNI) -->
+                                <h5 class="fw-bold mt-4 mb-3">2. Carte Nationale d'Identité</h5>
                                 <div class="row g-3 mb-3">
+                                    <!-- Numéro de la CNI -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Numéro CNI *</label>
                                         <input type="text" class="form-control" required>
                                     </div>
+                                    <!-- Date de délivrance de la CNI -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Date de délivrance *</label>
                                         <input type="date" class="form-control" required>
                                     </div>
                                 </div>
 
-                                <!-- CONTACT -->
+                                <!-- SECTION 3 : COORDONNÉES -->
                                 <h5 class="fw-bold mt-4 mb-3">3. Coordonnées</h5>
                                 <div class="row g-3 mb-3">
+                                    <!-- Téléphone -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Téléphone *</label>
+                                        <!-- Placeholder : exemple de format attendu -->
                                         <input type="tel" class="form-control" placeholder="+237 6XX XXX XXX" required>
                                     </div>
+                                    <!-- Email -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Email *</label>
+                                        <!-- Type email : valide automatiquement le format -->
                                         <input type="email" class="form-control" required>
                                     </div>
                                 </div>
 
-                                <!-- LOCALISATION -->
+                                <!-- SECTION 4 : LOCALISATION -->
                                 <h5 class="fw-bold mt-4 mb-3">4. Localisation</h5>
                                 <div class="row g-3 mb-3">
+                                    <!-- Région -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Région *</label>
                                         <select class="form-select" required>
                                             <option disabled selected>Choisir</option>
+                                            <!-- Liste des 10 régions du Cameroun -->
                                             <option>Adamaoua</option>
                                             <option>Centre</option>
                                             <option>Est</option>
@@ -124,58 +175,73 @@
                                             <option>Sud-Ouest</option>
                                         </select>
                                     </div>
+                                    <!-- Département -->
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Département *</label>
                                         <input type="text" class="form-control" required>
                                     </div>
                                 </div>
 
-                                <!-- DOCUMENTS -->
+                                <!-- SECTION 5 : PIÈCES OBLIGATOIRES (documents à télécharger) -->
                                 <h5 class="fw-bold mt-4 mb-3">5. Pièces obligatoires</h5>
+
+                                <!-- Photo officielle -->
                                 <div class="mb-3">
                                     <label class="form-label">Photo officielle *</label>
-                                    <input type="file" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Copie CNI *</label>
-                                    <input type="file" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Justificatif de résidence *</label>
+                                    <!-- Champ pour uploader un fichier (photo) -->
                                     <input type="file" class="form-control" required>
                                 </div>
 
-                                <!-- ENGAGEMENT -->
+                                <!-- Copie de la CNI -->
+                                <div class="mb-3">
+                                    <label class="form-label">Copie CNI *</label>
+                                    <!-- Champ pour uploader la copie de la CNI -->
+                                    <input type="file" class="form-control" required>
+                                </div>
+
+                                <!-- Justificatif de résidence -->
+                                <div class="mb-3">
+                                    <label class="form-label">Justificatif de résidence *</label>
+                                    <!-- Champ pour uploader le justificatif de domicile -->
+                                    <input type="file" class="form-control" required>
+                                </div>
+
+                                <!-- SECTION 6 : ENGAGEMENT (case à cocher) -->
                                 <div class="form-check mb-4">
+                                    <!-- Case à cocher obligatoire -->
                                     <input class="form-check-input" type="checkbox" required>
                                     <label class="form-check-label">
-                                        Je certifie sur l’honneur l’exactitude des informations fournies.
+                                        Je certifie sur l'honneur l'exactitude des informations fournies.
                                     </label>
                                 </div>
 
-                                <!-- BOUTON -->
-                                <div class="d-grid">
+                                <!-- BOUTON DE SOUMISSION -->
+                                <div class="d-grid"> <!-- d-grid : étire le bouton sur toute la largeur -->
                                     <button type="submit" class="btn btn-warning btn-lg fw-bold rounded-pill">
                                         Soumettre mon inscription
                                     </button>
                                 </div>
 
-                            </form>
+                            </form> <!-- Fin du formulaire -->
 
                         </div>
-                    </div>
-                </div>
+                    </div> <!-- Fin de la carte -->
+                </div> <!-- Fin de la colonne principale -->
 
             </div>
         </div>
-    </section>
+    </section> <!-- Fin de la section formulaire -->
 
+    <!-- Emplacement où sera chargé le pied de page (depuis un fichier séparé) -->
     <div id="footer"></div>
 
-    <!-- js -->
+    <!-- SCRIPTS JAVASCRIPT (placés en bas pour charger la page plus rapidement) -->
+    <!-- Bootstrap JavaScript : ajoute des fonctionnalités interactives comme les menus déroulants -->
     <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Notre fichier JavaScript personnalisé pour les fonctionnalités spécifiques -->
     <script src="/assets/js/app.js"></script>
 
-</body>
+</body> <!-- Fin du corps du document -->
 
-</html>
+</html> <!-- Fin du document HTML -->

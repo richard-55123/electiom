@@ -1,95 +1,170 @@
+<!-- Déclaration du type de document : ce fichier est une page HTML5 -->
 <!DOCTYPE html>
+
+<!-- Début du document HTML, la langue principale est le français -->
 <html lang="fr">
 
+<!-- Section d'en-tête : contient les informations techniques et métadonnées -->
+
 <head>
+    <!-- Définition de l'encodage des caractères : UTF-8 permet d'afficher les accents et caractères spéciaux -->
     <meta charset="UTF-8">
+
+    <!-- Balise pour le design responsive : s'adapte à la taille de l'écran du dispositif -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
     <title>Se connecter – ÉLECTIONS CM</title>
+
+    <!-- FAVICON : petite icône qui apparaît à côté du titre dans l'onglet du navigateur -->
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- GOOGLE FONTS -->
+    <!-- Importation des polices d'écriture depuis Google Fonts -->
+    <!-- Deux polices sont importées : Montserrat et Open Sans -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Importation des feuilles de style CSS -->
+    <!-- Bootstrap CSS : bibliothèque qui facilite la mise en page et le design -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Notre feuille de style personnalisée pour les modifications spécifiques -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Style CSS intégré directement dans la page (pour les styles spécifiques à cette page) -->
     <style>
+        /* Style général du corps de la page */
         body {
             background: #f5f6fa;
+            /* Couleur de fond gris très clair */
             font-family: "Open Sans", sans-serif;
+            /* Police d'écriture principale */
         }
 
+        /* Style pour la carte de connexion (container principal) */
         .login-card {
             max-width: 450px;
+            /* Largeur maximale de 450 pixels */
             margin: 60px auto;
+            /* Marge de 60px en haut/bas et centrage horizontal automatique */
         }
 
+        /* Style pour la carte elle-même */
         .login-card .card {
             border-radius: 15px;
+            /* Coins arrondis de 15 pixels */
         }
     </style>
 </head>
 
+<!-- Corps du document : tout le contenu visible par les visiteurs -->
+
 <body>
 
-    <!-- HEADER AUTO -->
+    <!-- SECTION HEADER : sera chargée depuis un fichier séparé (header.html) -->
+    <!-- Cette div vide sera remplie par JavaScript avec le contenu du header -->
     <div id="header"></div>
 
-    <section class="py-5">
-        <div class="container">
+    <!-- SECTION PRINCIPALE : formulaire de connexion -->
+    <section class="py-5"> <!-- py-5 : padding vertical important (espacement haut et bas) -->
+        <div class="container"> <!-- Conteneur pour centrer le contenu et limiter sa largeur -->
 
+            <!-- Carte de connexion (div principale) -->
             <div class="login-card">
-                <div class="card shadow border-0 p-4">
+                <!-- Carte Bootstrap avec ombre et sans bordure visible -->
+                <div class="card shadow border-0 p-4"> <!-- p-4 : padding interne -->
 
+                    <!-- Titre de la carte -->
                     <h3 class="text-center fw-bold mb-3">Connexion</h3>
+
+                    <!-- Sous-titre -->
                     <p class="text-center text-muted mb-4">Accédez à votre espace électoral</p>
 
+                    <!-- Début du formulaire de connexion -->
                     <form>
 
-                        <div class="mb-3">
+                        <!-- CHAMP 1 : Adresse Email -->
+                        <div class="mb-3"> <!-- mb-3 : marge basse (espacement sous le champ) -->
+                            <!-- Étiquette du champ -->
                             <label class="form-label fw-semibold">Adresse Email</label>
+                            <!-- Champ de saisie pour l'email -->
                             <input type="email" class="form-control form-control-lg" placeholder="exemple@email.com"
                                 required>
+                            <!-- Explications :
+                                - type="email" : indique que c'est un champ pour email
+                                - class="form-control form-control-lg" : champ Bootstrap de grande taille
+                                - placeholder="exemple@email.com" : texte d'exemple qui disparaît quand on tape
+                                - required : champ obligatoire (ne peut pas être laissé vide)
+                            -->
                         </div>
 
+                        <!-- CHAMP 2 : Mot de passe -->
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Mot de passe</label>
+                            <!-- Champ de saisie pour le mot de passe -->
                             <input type="password" class="form-control form-control-lg" placeholder="••••••••" required>
+                            <!-- Explications :
+                                - type="password" : masque les caractères avec des points (••••)
+                                - placeholder="••••••••" : montre que c'est un champ masqué
+                                - required : champ obligatoire
+                            -->
                         </div>
 
+                        <!-- BOUTON DE CONNEXION -->
                         <button class="btn btn-success btn-lg w-100 fw-bold rounded-pill">
                             Se connecter
                         </button>
+                        <!-- Explications :
+                            - class="btn btn-success" : bouton vert (couleur succès)
+                            - btn-lg : bouton de grande taille
+                            - w-100 : prend 100% de la largeur disponible
+                            - fw-bold : texte en gras
+                            - rounded-pill : coins très arrondis (forme de pilule)
+                        -->
 
-                        <div class="text-center mt-3">
+                        <!-- LIEN : Mot de passe oublié -->
+                        <div class="text-center mt-3"> <!-- mt-3 : marge en haut -->
                             <a href="#" class="text-decoration-none">Mot de passe oublié ?</a>
+                            <!-- Explications :
+                                - href="#" : lien vers la même page (à remplacer par une vraie page)
+                                - text-decoration-none : pas de soulignement
+                            -->
                         </div>
 
+                        <!-- SÉPARATEUR VISUEL -->
                         <hr>
+                        <!-- Ligne horizontale pour séparer les sections -->
 
-                        <p class="text-center mb-0">
+                        <!-- LIEN VERS LA PAGE D'INSCRIPTION -->
+                        <p class="text-center mb-0"> <!-- mb-0 : pas de marge basse -->
                             Pas encore inscrit ?
+                            <!-- Lien vers la page d'inscription -->
                             <a href="register.html" class="fw-bold text-warning">Créer un compte</a>
+                            <!-- Explications :
+                                - href="register.html" : lien vers la page d'inscription
+                                - fw-bold text-warning : texte en gras et couleur jaune
+                            -->
                         </p>
 
-                    </form>
+                    </form> <!-- Fin du formulaire -->
 
-                </div>
-            </div>
+                </div> <!-- Fin de la carte -->
+            </div> <!-- Fin du conteneur login-card -->
 
-        </div>
-    </section>
+        </div> <!-- Fin du container Bootstrap -->
+    </section> <!-- Fin de la section -->
 
-    <!-- FOOTER AUTO -->
+    <!-- SECTION FOOTER : sera chargée depuis un fichier séparé (footer.html) -->
     <div id="footer"></div>
 
-    <!-- JS -->
+    <!-- Importation des fichiers JavaScript -->
+    <!-- Bootstrap JavaScript : pour les fonctionnalités interactives -->
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Notre fichier JavaScript personnalisé -->
     <script src="assets/js/app.js"></script>
 
-</body>
+</body> <!-- Fin du corps du document -->
 
-</html>
+</html> <!-- Fin du document HTML -->

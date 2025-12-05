@@ -1,73 +1,95 @@
+<!-- Ceci est un document HTML - C'est le langage utilisé pour créer des pages web -->
 <!DOCTYPE html>
+
+<!-- Début de la page web. "lang="en"" signifie que la page est principalement en anglais -->
 <html lang="en">
 
+<!-- Section "head" : Contient les informations techniques de la page (invisibles pour les visiteurs) -->
+
 <head>
-    <!-- BASE -->
+    <!-- Encodage des caractères : Permet d'afficher correctement les lettres accentuées et les symboles -->
     <meta charset="UTF-8">
+
+    <!-- Compatibilité avec Internet Explorer : Assure que la page s'affiche correctement sur les vieux navigateurs -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Icône dans l'onglet du navigateur (petit logo à côté du titre) -->
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- RESPONSIVE -->
+    <!-- RESPONSIVE : Permet à la page de s'adapter aux différents écrans (téléphone, tablette, ordinateur) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TITRE SEO -->
+    <!-- Titre de la page (apparaît dans l'onglet du navigateur) -->
     <title>Élections Cameroun – Plateforme Officielle des Résultats, Candidats & Inscriptions</title>
 
-    <!-- DESCRIPTION SEO -->
+    <!-- Description pour les moteurs de recherche comme Google -->
     <meta name="description"
         content="Plateforme officielle des élections au Cameroun. Consultez les candidats, vérifiez votre inscription électorale, suivez les résultats en direct et les communiqués officiels.">
 
-    <!-- MOTS-CLÉS -->
+    <!-- Mots-clés pour aider le référencement sur les moteurs de recherche -->
     <meta name="keywords"
         content="élections Cameroun, résultats élections Cameroun, inscription électorale Cameroun, candidats élections, ELECAM, vote Cameroun">
 
-    <!-- AUTEUR -->
+    <!-- Auteur du site web -->
     <meta name="author" content="Elections Cameroun">
 
 
-    <!-- CANONICAL -->
-    <link rel="canonical" href="https://www.tonsite.com/">
-
-    <!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <!-- META DONNÉES POUR LES RÉSEAUX SOCIAUX (quand on partage le lien sur Facebook, WhatsApp, etc.) -->
+    <!-- Titre qui apparaîtra sur les réseaux sociaux -->
     <meta property="og:title" content="Élections Cameroun  – Plateforme Officielle">
+
+    <!-- Description qui apparaîtra sur les réseaux sociaux -->
     <meta property="og:description"
         content="Candidats, résultats, inscription électorale et communiqués officiels des élections au Cameroun.">
-    <meta property="og:image" content="https://www.tonsite.com/assets/images/flag.jpg">
-    <meta property="og:url" content="https://www.tonsite.com/">
+
+    <!-- Image qui apparaîtra sur les réseaux sociaux quand on partage le lien -->
+    <meta property="og:image" content="assets/images/logo.png">
+
+
+    <!-- Type de contenu (ici, un site web) -->
     <meta property="og:type" content="website">
 
-
-    <!-- GOOGLE FONTS -->
+    <!-- POLICES D'ÉCRITURE : On importe des styles d'écriture depuis Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- FEUILLES DE STYLE CSS : Fichiers qui définissent l'apparence du site -->
+    <!-- Bootstrap : Framework pour rendre le site responsive et joli -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Notre feuille de style personnalisée -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-
 </head>
 
+<!-- Section "body" : Contient tout ce que les visiteurs voient à l'écran -->
 
 <body>
 
+    <!-- EN-TÊTE DU SITE : Cette partie est chargée depuis un fichier séparé (header.html) -->
     <div id="header"></div>
 
-    <!-- HERO (style déjà utilisé, à garder tel quel) -->
+    <!-- SECTION HERO : Bannière principale en haut de la page -->
     <section class="bg-dark text-white py-5">
         <div class="container">
             <div class="row align-items-center g-5">
 
+                <!-- Colonne de gauche : Texte et informations -->
                 <div class="col-lg-6 text-center text-lg-start">
+                    <!-- Badge/étiquette "République du Cameroun" -->
                     <span class="badge bg-success mb-2 fs-6">🇨🇲 République du Cameroun</span>
+
+                    <!-- Badge/étiquette "Élection Nationale" -->
                     <span class="badge bg-danger mb-2 fs-6 ms-2">Élection Nationale</span>
 
+                    <!-- Titre principal de la section -->
                     <h1 class="display-5 fw-bold mt-3">
                         Plateforme officielle des
+                        <!-- "text-warning" met ce texte en jaune/orange -->
                         <span class="text-warning">élections au Cameroun</span>
                     </h1>
 
+                    <!-- Paragraphe de description -->
                     <p class="lead mt-4">
                         Suivez l’actualité électorale, consultez les candidats,
                         vérifiez votre inscription, accédez aux résultats officiels
@@ -75,19 +97,25 @@
                         au Cameroun.
                     </p>
 
+                    <!-- Blocs de statistiques (3 colonnes) -->
                     <div class="row text-center mt-4 g-3">
+                        <!-- Première statistique : Nombre d'électeurs -->
                         <div class="col-4">
                             <div class="p-2 border rounded">
                                 <h5 class="fw-bold text-success mb-0">12M+</h5>
                                 <small>Électeurs</small>
                             </div>
                         </div>
+
+                        <!-- Deuxième statistique : Nombre de bureaux de vote -->
                         <div class="col-4">
                             <div class="p-2 border rounded">
                                 <h5 class="fw-bold text-danger mb-0">25 000+</h5>
                                 <small>Bureaux</small>
                             </div>
                         </div>
+
+                        <!-- Troisième statistique : Nombre de régions -->
                         <div class="col-4">
                             <div class="p-2 border rounded">
                                 <h5 class="fw-bold text-warning mb-0">10</h5>
@@ -96,51 +124,65 @@
                         </div>
                     </div>
 
+                    <!-- Boutons d'action -->
                     <div
                         class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mt-4">
+                        <!-- Bouton "Voir les candidats" (jaune) -->
                         <a href="candidats.html" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">Voir les
                             candidats</a>
+
+                        <!-- Bouton "Résultats officiels" (blanc avec bordure) -->
                         <a href="resultats.html"
                             class="btn btn-outline-light btn-lg fw-bold rounded-pill px-4">Résultats officiels</a>
                     </div>
-
                 </div>
 
+                <!-- Colonne de droite : Diaporama d'images -->
                 <div class="col-lg-6">
+                    <!-- Carousel/slider : diaporama qui défile automatiquement -->
                     <div id="heroSlider" class="carousel slide shadow rounded" data-bs-ride="carousel">
+                        <!-- Conteneur des images du diaporama -->
                         <div class="carousel-inner rounded">
+                            <!-- Première image (active = visible au départ) -->
                             <div class="carousel-item active">
                                 <img src="assets/images/inovation.png" class="d-block w-100 rounded"
                                     alt="Vote démocratique au Cameroun">
                             </div>
+
+                            <!-- Deuxième image -->
                             <div class="carousel-item">
                                 <img src="assets/images/consultive.png" class="d-block w-100 rounded"
                                     alt="Urne électorale">
                             </div>
+
+                            <!-- Troisième image -->
                             <div class="carousel-item">
                                 <img src="assets/images/rencontre.png" class="d-block w-100 rounded"
                                     alt="Citoyens camerounais en vote">
                             </div>
                         </div>
+
+                        <!-- Flèche pour revenir à l'image précédente -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
+
+                        <!-- Flèche pour passer à l'image suivante -->
                         <button class="carousel-control-next" type="button" data-bs-target="#heroSlider"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- COMPTE À REBOURS & PRÉPARATION CITOYENNE -->
+    <!-- SECTION : COMPTE À REBOURS & PRÉPARATION CITOYENNE -->
     <section class="bg-light py-5 position-relative overflow-hidden">
 
-        <!-- Image de fond à gauche (discrète) -->
+        <!-- Image de fond discrète (drapeau en arrière-plan avec transparence) -->
         <div class="position-absolute top-0 start-0 h-100 w-50" style="
             background-image: url('/assets/images/flag.jpg');
             background-repeat: no-repeat;
@@ -148,36 +190,48 @@
             background-size: contain;
             opacity: 0.12;
             z-index: 0;
-        ">
-        </div>
+        "></div>
 
-        <!-- Contenu principal -->
+        <!-- Contenu principal (au-dessus de l'image de fond) -->
         <div class="container text-center position-relative" style="z-index: 1;">
+            <!-- Badge "Prochain scrutin" -->
             <span class="badge bg-danger fs-6 mb-3">Prochain scrutin</span>
+
+            <!-- Titre de la section -->
             <h2 class="fw-bold mb-3">Préparez-vous à voter</h2>
+
+            <!-- Description -->
             <p class="lead mb-4">
                 Vérifiez votre inscription et soyez prêt pour exercer votre droit citoyen.
             </p>
 
+            <!-- Compte à rebours (jours, heures, minutes, secondes) -->
             <div class="row justify-content-center g-3 mb-4">
+                <!-- Jours restants -->
                 <div class="col-6 col-md-2">
                     <div class="p-3 border rounded shadow">
                         <h3 class="fw-bold text-success mb-0">120</h3>
                         <small>Jours</small>
                     </div>
                 </div>
+
+                <!-- Heures restantes -->
                 <div class="col-6 col-md-2">
                     <div class="p-3 border rounded shadow">
                         <h3 class="fw-bold text-danger mb-0">10</h3>
                         <small>Heures</small>
                     </div>
                 </div>
+
+                <!-- Minutes restantes -->
                 <div class="col-6 col-md-2">
                     <div class="p-3 border rounded shadow">
                         <h3 class="fw-bold text-warning mb-0">45</h3>
                         <small>Minutes</small>
                     </div>
                 </div>
+
+                <!-- Secondes restantes -->
                 <div class="col-6 col-md-2">
                     <div class="p-3 border rounded shadow">
                         <h3 class="fw-bold text-primary mb-0">30</h3>
@@ -186,39 +240,47 @@
                 </div>
             </div>
 
+            <!-- Bouton pour vérifier son inscription -->
             <a href="electeurs.html" class="btn btn-success btn-lg fw-bold rounded-pill px-4">
                 Vérifier mon inscription
             </a>
         </div>
-
     </section>
 
-
-    <!-- TYPES D’ÉLECTIONS AVEC IMAGES -->
+    <!-- SECTION : TYPES D'ÉLECTIONS -->
     <section class="bg-light py-5">
         <div class="container text-center">
-            <h2 class="fw-bold mb-4">Types d’Élections au Cameroun</h2>
+            <!-- Titre de la section -->
+            <h2 class="fw-bold mb-4">Types d'Élections au Cameroun</h2>
+
+            <!-- Description -->
             <p class="lead mb-5">Découvrez les différents scrutins organisés par ÉLECTIONS CM.</p>
 
+            <!-- Cartes présentant les différents types d'élections -->
             <div class="row g-4">
+                <!-- Carte : Élection présidentielle -->
                 <div class="col-md-3">
                     <div class="card shadow h-100">
                         <img src="/assets/images/embleme.png" class="card-img-top" alt="Présidentielle">
                         <div class="card-body text-center">
                             <h5 class="fw-bold">Présidentielle</h5>
-                            <p>Élection du Président de la République. Votre voix définit l’avenir du pays.</p>
+                            <p>Élection du Président de la République. Votre voix définit l'avenir du pays.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Carte : Élection législative -->
                 <div class="col-md-3">
                     <div class="card shadow h-100">
                         <img src="/assets/images/embleme.png" class="card-img-top" alt="Législative">
                         <div class="card-body text-center">
                             <h5 class="fw-bold">Législative</h5>
-                            <p>Élection des Députés à l’Assemblée Nationale.</p>
+                            <p>Élection des Députés à l'Assemblée Nationale.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Carte : Élection municipale -->
                 <div class="col-md-3">
                     <div class="card shadow h-100">
                         <img src="/assets/images/embleme.png" class="card-img-top" alt="Municipale">
@@ -228,6 +290,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Carte : Élection régionale -->
                 <div class="col-md-3">
                     <div class="card shadow h-100">
                         <img src="/assets/images/embleme.png" class="card-img-top" alt="Régionale">
@@ -241,31 +305,33 @@
         </div>
     </section>
 
-    <!-- SÉCURITÉ & TRANSPARENCE -->
+    <!-- SECTION : SÉCURITÉ & TRANSPARENCE -->
     <section class="bg-dark text-white py-5">
         <div class="container">
             <div class="row align-items-center gy-5">
 
-                <!-- TEXTE -->
+                <!-- Colonne de gauche : Texte et informations -->
                 <div class="col-12 col-lg-6 text-center text-lg-start order-2 order-lg-1">
-
+                    <!-- Badges "Sécurité" et "Transparence" -->
                     <div class="mb-3">
                         <span class="badge bg-success fs-6 me-2">Sécurité</span>
                         <span class="badge bg-warning fs-6">Transparence</span>
                     </div>
 
+                    <!-- Titre de la section -->
                     <h2 class="fw-bold mb-4">
                         Garantir des élections libres et sûres
                     </h2>
 
+                    <!-- Description -->
                     <p class="lead mb-4">
                         ÉLECTIONS CM met en place toutes les mesures nécessaires pour sécuriser les scrutins et garantir
                         une transparence totale à tous les niveaux.
                     </p>
 
-                    <!-- CARTES -->
+                    <!-- Cartes de garanties -->
                     <div class="row text-center g-3">
-
+                        <!-- Carte : Surveillance -->
                         <div class="col-12 col-sm-4">
                             <div class="p-3 border rounded h-100">
                                 <h5 class="fw-bold text-success mb-1">Surveillance</h5>
@@ -273,6 +339,7 @@
                             </div>
                         </div>
 
+                        <!-- Carte : Comptage transparent -->
                         <div class="col-12 col-sm-4">
                             <div class="p-3 border rounded h-100">
                                 <h5 class="fw-bold text-danger mb-1">Comptage</h5>
@@ -280,111 +347,119 @@
                             </div>
                         </div>
 
+                        <!-- Carte : Observateurs internationaux -->
                         <div class="col-12 col-sm-4">
                             <div class="p-3 border rounded h-100">
                                 <h5 class="fw-bold text-warning mb-1">Observateurs</h5>
                                 <small>Internationaux</small>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- IMAGE -->
+                <!-- Colonne de droite : Image -->
                 <div class="col-12 col-lg-6 order-1 order-lg-2 text-center">
                     <img src="assets/images/jeunesse.png" class="img-fluid rounded shadow"
                         alt="Sécurité élections Cameroun">
                 </div>
-
             </div>
         </div>
     </section>
 
-
-
-    <!-- ACTUALITÉS & COMMUNIQUÉS OFFICIELS -->
+    <!-- SECTION : ACTUALITÉS & COMMUNIQUÉS -->
     <section class="bg-light py-5">
         <div class="container">
             <div class="row align-items-center g-5">
 
-                <div class="col-lg-6 order-lg-2 text-center text-lg-start">
-                    <span class="badge bg-success mb-2 fs-6">Actualités</span>
-                    <span class="badge bg-danger mb-2 fs-6 ms-2">Communiqués officiels</span>
-
-                    <h2 class="display-6 fw-bold mt-3">Restez informé des dernières nouvelles</h2>
-                    <p class="lead mt-4">
-                        Toutes les annonces officielles d’ÉLECTIONS CM pour les citoyens. Restez informé et engagé.
-                    </p>
-
-                    <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
-                        <a href="#" class="btn btn-warning fw-bold rounded-pill px-4">Lire les communiqués</a>
-                        <a href="#" class="btn btn-outline-dark fw-bold rounded-pill px-4">Actualités récentes</a>
-                    </div>
-                </div>
-
+                <!-- Colonne de gauche : Image -->
                 <div class="col-lg-6 order-lg-1">
                     <img src="assets/images/publique.png" class="d-block w-100 rounded shadow"
                         alt="Communiqués officiels Cameroun">
                 </div>
 
+                <!-- Colonne de droite : Texte et boutons -->
+                <div class="col-lg-6 order-lg-2 text-center text-lg-start">
+                    <!-- Badges "Actualités" et "Communiqués officiels" -->
+                    <span class="badge bg-success mb-2 fs-6">Actualités</span>
+                    <span class="badge bg-danger mb-2 fs-6 ms-2">Communiqués officiels</span>
+
+                    <!-- Titre de la section -->
+                    <h2 class="display-6 fw-bold mt-3">Restez informé des dernières nouvelles</h2>
+
+                    <!-- Description -->
+                    <p class="lead mt-4">
+                        Toutes les annonces officielles d'ÉLECTIONS CM pour les citoyens. Restez informé et engagé.
+                    </p>
+
+                    <!-- Boutons d'action -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                        <!-- Bouton "Lire les communiqués" -->
+                        <a href="#" class="btn btn-warning fw-bold rounded-pill px-4">Lire les communiqués</a>
+
+                        <!-- Bouton "Actualités récentes" -->
+                        <a href="#" class="btn btn-outline-dark fw-bold rounded-pill px-4">Actualités récentes</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PARTENAIRES INSTITUTIONNELS -->
+    <!-- SECTION : PARTENAIRES INSTITUTIONNELS -->
     <section class="bg-dark text-white py-5">
         <div class="container">
             <div class="row align-items-center g-5">
 
+                <!-- Colonne de gauche : Texte et logos des partenaires -->
                 <div class="col-lg-6 text-center text-lg-start">
+                    <!-- Badges "Partenaires" et "Institutionnels" -->
                     <span class="badge bg-success mb-2 fs-6">Partenaires</span>
                     <span class="badge bg-warning mb-2 fs-6 ms-2">Institutionnels</span>
 
+                    <!-- Titre de la section -->
                     <h2 class="display-6 fw-bold mt-3">Avec le soutien de nos partenaires officiels</h2>
+
+                    <!-- Description -->
                     <p class="lead mt-4">
                         Nos partenaires garantissent la transparence et le bon déroulement des élections à travers tout
                         le Cameroun.
                     </p>
 
+                    <!-- Logos des partenaires -->
                     <div class="row text-center mt-4 g-3">
+                        <!-- Logo ELECAM -->
                         <div class="col-3">
                             <img src="assets/images/elecam.png" class="img-fluid" alt="ÉLECTIONS CM">
                         </div>
+
+                        <!-- Logo IRIC -->
                         <div class="col-3">
                             <img src="assets/images/IRIC_Yaoundé_Logo.png" class="img-fluid"
                                 alt="Gouvernement du Cameroun">
                         </div>
-                        <!-- <div class="col-3">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_UNDP.png"
-                                class="img-fluid" alt="Partenaire international">
-                        </div>
-                        <div class="col-3">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Logo_CEDEAO.png"
-                                class="img-fluid" alt="Observateurs internationaux">
-                        </div> -->
                     </div>
-
                 </div>
 
+                <!-- Colonne de droite : Image -->
                 <div class="col-lg-6">
                     <img src="assets/images/atelier.png" class="d-block w-100 rounded shadow"
                         alt="Partenaires élections Cameroun">
                 </div>
-
             </div>
         </div>
     </section>
 
-
-
-
-
-
+    <!-- PIED DE PAGE : Cette partie est chargée depuis un fichier séparé (footer.html) -->
     <div id="footer"></div>
 
-    <!-- js -->
+    <!-- SCRIPTS JAVASCRIPT : Fichiers qui ajoutent des fonctionnalités interactives au site -->
+
+    <!-- Bootstrap JavaScript : Pour les fonctionnalités comme le diaporama -->
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Notre fichier JavaScript personnalisé -->
     <script src="assets/js/app.js"></script>
 </body>
+
+<!-- Fin de la page web -->
 
 </html>
