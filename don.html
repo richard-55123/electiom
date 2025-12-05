@@ -3,204 +3,645 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Faire un don — Plateforme Électorale Nationale</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- SEO -->
+    <title>Guide d'utilisation - Plateforme Élections Cameroun | Aide et Assistance</title>
+    <meta name="description"
+        content="Guide complet d'utilisation de la plateforme électorale camerounaise. Apprenez à vous inscrire, voter, consulter les résultats et utiliser toutes les fonctionnalités.">
+    <meta name="keywords"
+        content="aide élections Cameroun, guide utilisateur, comment voter, inscription électorale, résultats élections, assistance Élections CM">
+    <meta name="author" content="Élections Cameroun">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Guide d'utilisation - Plateforme Élections Cameroun">
+    <meta property="og:description"
+        content="Tout ce que vous devez savoir pour utiliser la plateforme électorale officielle du Cameroun.">
+    <meta property="og:image" content="https://www.tonsite.com/assets/images/help-guide.jpg">
+    <meta property="og:url" content="https://www.tonsite.com/aide.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap"
         rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-light">
+<body>
 
+    <!-- HEADER -->
     <div id="header"></div>
 
-    <!-- ================= HERO ================= -->
-    <section class="bg-dark text-white text-center py-5">
+    <!-- SECTION HERO -->
+    <section class="bg-dark text-white py-5">
         <div class="container">
-            <h1 class="fw-bold text-warning">Faire un don 🇨🇲</h1>
-            <p class="lead mt-2">
-                Soutenez le processus démocratique et la transparence électorale au Cameroun
-            </p>
-        </div>
-    </section>
-
-    <!-- ================= INTRO ================= -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9 text-center">
-                    <p class="fs-5">
-                        La Plateforme Électorale Nationale permet aux citoyens, partenaires et organisations
-                        de contribuer volontairement au bon fonctionnement du processus électoral à travers
-                        des dons transparents, sécurisés et encadrés.
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-warning text-dark fs-6 mb-3">Guide d'utilisation</span>
+                    <h1 class="display-5 fw-bold mb-4">
+                        Guide complet de la plateforme
+                        <span class="text-warning">Élections Cameroun</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Découvrez comment utiliser toutes les fonctionnalités de notre plateforme électorale officielle.
+                        De l'inscription à la consultation des résultats, nous vous guidons à chaque étape.
                     </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#inscription" class="btn btn-outline-light rounded-pill">Inscription électeur</a>
+                        <a href="#candidature" class="btn btn-outline-light rounded-pill">Devenir candidat</a>
+                        <a href="#resultats" class="btn btn-outline-light rounded-pill">Consulter les résultats</a>
+                        <a href="#faq" class="btn btn-outline-light rounded-pill">FAQ</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <i class="fas fa-question-circle display-1 text-warning"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ================= PROCESSUS DE DON ================= -->
-    <section class="py-5 bg-white">
+    <!-- LIENS RAPIDES -->
+    <section class="bg-light py-4">
         <div class="container">
+            <div class="row g-2 text-center">
+                <div class="col-6 col-md-3">
+                    <a href="electeurs.html" class="btn btn-outline-success w-100">
+                        <i class="fas fa-user-plus me-2"></i>Inscription
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="candidats.html" class="btn btn-outline-warning w-100">
+                        <i class="fas fa-user-tie me-2"></i>Candidature
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="resultats.html" class="btn btn-outline-danger w-100">
+                        <i class="fas fa-chart-bar me-2"></i>Résultats
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="register.html" class="btn btn-outline-primary w-100">
+                        <i class="fas fa-user-circle me-2"></i>Mon compte
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- FONCTIONNALITÉS PRINCIPALES -->
+    <section class="py-5">
+        <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold text-success">Processus officiel de don</h2>
-                <p class="text-muted">Étapes simples, claires et sécurisées</p>
+                <h2 class="fw-bold mb-3">Fonctionnalités principales</h2>
+                <p class="text-muted lead">Découvrez les services offerts par notre plateforme</p>
             </div>
 
             <div class="row g-4">
-
+                <!-- Carte 1 -->
                 <div class="col-md-4">
-                    <div class="p-4 shadow rounded-4 text-center h-100">
-                        <i class="bi bi-1-circle-fill fs-1 text-danger"></i>
-                        <h5 class="mt-3 fw-bold">Prise de contact</h5>
-                        <p class="small text-muted">
-                            Le donateur contacte officiellement l’administration électorale via les coordonnées
-                            fournies.
-                        </p>
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 70px; height: 70px;">
+                                <i class="fas fa-user-plus fs-3"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Inscription Électeur</h4>
+                            <p class="card-text">
+                                Inscrivez-vous sur les listes électorales pour exercer votre droit de vote.
+                                Vérifiez votre éligibilité et suivez les étapes.
+                            </p>
+                            <a href="#inscription" class="btn btn-outline-warning">Voir le guide</a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Carte 2 -->
                 <div class="col-md-4">
-                    <div class="p-4 shadow rounded-4 text-center h-100">
-                        <i class="bi bi-2-circle-fill fs-1 text-warning"></i>
-                        <h5 class="mt-3 fw-bold">Validation administrative</h5>
-                        <p class="small text-muted">
-                            Le don est enregistré, validé et encadré par les autorités compétentes.
-                        </p>
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 70px; height: 70px;">
+                                <i class="fas fa-user-tie fs-3"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Candidature</h4>
+                            <p class="card-text">
+                                Déposez votre candidature aux différentes élections.
+                                Consultez les conditions et soumettez votre dossier en ligne.
+                            </p>
+                            <a href="#candidature" class="btn btn-outline-danger">Voir le guide</a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Carte 3 -->
                 <div class="col-md-4">
-                    <div class="p-4 shadow rounded-4 text-center h-100">
-                        <i class="bi bi-3-circle-fill fs-1 text-success"></i>
-                        <h5 class="mt-3 fw-bold">Versement sécurisé</h5>
-                        <p class="small text-muted">
-                            Le paiement est effectué via les canaux officiels autorisés.
-                        </p>
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 70px; height: 70px;">
+                                <i class="fas fa-chart-bar fs-3"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Résultats</h4>
+                            <p class="card-text">
+                                Consultez les résultats officiels des élections en temps réel.
+                                Visualisez les statistiques et téléchargez les rapports.
+                            </p>
+                            <a href="#resultats" class="btn btn-outline-success">Voir le guide</a>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- ================= MOYENS DE PAIEMENT ================= -->
-    <section class="py-5">
+    <!-- GUIDE ÉTAPE PAR ÉTAPE -->
+    <section class="bg-light py-5" id="inscription">
         <div class="container">
-
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Moyens de paiement autorisés</h2>
+            <div class="text-center mb-5">
+                <span class="badge bg-success fs-6 mb-3">Guide pratique</span>
+                <h2 class="fw-bold mb-3">Comment s'inscrire comme électeur</h2>
+                <p class="text-muted">Suivez ces étapes simples pour vous inscrire</p>
             </div>
 
-            <div class="row text-center g-4">
-
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow h-100">
-                        <i class="bi bi-bank fs-1 text-success"></i>
-                        <h5 class="fw-bold mt-3">Virement bancaire</h5>
-                        <p class="small text-muted">
-                            Vers les comptes officiels de la Plateforme Électorale Nationale
-                        </p>
+            <div class="row">
+                <!-- Étape 1 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                    style="width: 40px; height: 40px;">
+                                    1
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Accédez au formulaire</h4>
+                                    <p class="mb-3">
+                                        Cliquez sur "Devenir Électeur" dans le menu principal ou accédez directement à
+                                        la page <a href="electeurs.html" class="text-success fw-bold">Inscription
+                                            Électeur</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow h-100">
-                        <i class="bi bi-phone fs-1 text-warning"></i>
-                        <h5 class="fw-bold mt-3">Mobile Money</h5>
-                        <p class="small text-muted">
-                            MTN MoMo & Orange Money (sur demande officielle)
-                        </p>
+                <!-- Étape 2 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                    style="width: 40px; height: 40px;">
+                                    2
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Remplissez vos informations</h4>
+                                    <p class="mb-3">
+                                        Complétez tous les champs obligatoires : nom, prénom, CNI, date de naissance,
+                                        coordonnées et localisation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow h-100">
-                        <i class="bi bi-cash-coin fs-1 text-danger"></i>
-                        <h5 class="fw-bold mt-3">Versement administratif</h5>
-                        <p class="small text-muted">
-                            Dans les services financiers agréés de l'administration
-                        </p>
+                <!-- Étape 3 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                    style="width: 40px; height: 40px;">
+                                    3
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Téléchargez les pièces</h4>
+                                    <p class="mb-3">
+                                        Joignez les documents requis : photo d'identité, copie de la CNI et justificatif
+                                        de résidence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Étape 4 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                    style="width: 40px; height: 40px;">
+                                    4
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Soumettez et suivez</h4>
+                                    <p class="mb-3">
+                                        Validez votre inscription et notez votre numéro de dossier. Vous recevrez une
+                                        confirmation par email.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <div class="text-center mt-4">
+                <a href="electeurs.html" class="btn btn-success btn-lg rounded-pill px-4">
+                    <i class="fas fa-arrow-right me-2"></i>Commencer l'inscription
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- ================= TRANSPARENCE ================= -->
-    <section class="py-5 bg-white">
+    <!-- GUIDE CANDIDATURE -->
+    <section class="py-5" id="candidature">
         <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark fs-6 mb-3">Guide candidats</span>
+                <h2 class="fw-bold mb-3">Devenir candidat aux élections</h2>
+                <p class="text-muted">Processus de dépôt de candidature</p>
+            </div>
 
-            <div class="row align-items-center">
-
+            <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
-                    <h2 class="fw-bold text-success">Transparence & Traçabilité</h2>
-                    <p class="mt-3">
-                        Tous les dons sont :
-                    </p>
-                    <ul>
-                        <li>Enregistrés officiellement</li>
-                        <li>Traçables et contrôlés</li>
-                        <li>Utilisés uniquement pour le processus électoral</li>
-                        <li>Soumis aux audits administratifs</li>
-                    </ul>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-warning mb-3">
+                                <i class="fas fa-check-circle me-2"></i>Conditions requises
+                            </h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-check text-success me-2"></i>Être de nationalité camerounaise
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-check text-success me-2"></i>Avoir au moins 23 ans
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-check text-success me-2"></i>Jouir de ses droits civiques et
+                                    politiques
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-check text-success me-2"></i>Casier judiciaire vierge
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-check text-success me-2"></i>Être à jour avec le fisc
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-lg-6 text-center">
-                    <i class="bi bi-shield-check display-1 text-success"></i>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-warning mb-3">
+                                <i class="fas fa-file-alt me-2"></i>Documents nécessaires
+                            </h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-file-pdf text-danger me-2"></i>Formulaire de candidature dûment
+                                    rempli
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-id-card text-danger me-2"></i>Copie certifiée de la CNI
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-home text-danger me-2"></i>Attestation de résidence
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-gavel text-danger me-2"></i>Casier judiciaire
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <i class="fas fa-camera text-danger me-2"></i>Photos d'identité récentes
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
             </div>
 
+            <div class="alert alert-warning" role="alert">
+                <h5 class="alert-heading">
+                    <i class="fas fa-exclamation-triangle me-2"></i>Important
+                </h5>
+                <p class="mb-0">
+                    Le dépôt de candidature doit être effectué dans les délais légaux. Consultez le calendrier électoral
+                    pour les dates limites.
+                </p>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="candidats.html" class="btn btn-warning btn-lg rounded-pill px-4">
+                    <i class="fas fa-user-tie me-2"></i>Déposer ma candidature
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- ================= CONTACT OFFICIEL ================= -->
-    <section class="py-5">
+    <!-- GUIDE RÉSULTATS -->
+    <section class="bg-light py-5" id="resultats">
         <div class="container">
-
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Contact officiel pour les dons</h2>
+            <div class="text-center mb-5">
+                <span class="badge bg-danger fs-6 mb-3">Transparence</span>
+                <h2 class="fw-bold mb-3">Consulter les résultats électoraux</h2>
+                <p class="text-muted">Accédez aux résultats officiels en toute transparence</p>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                    style="width: 50px; height: 50px;">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Navigation dans les résultats</h4>
+                                    <p class="mb-0">
+                                        La page des résultats vous permet de consulter les données électorales de
+                                        différentes manières :
+                                    </p>
+                                </div>
+                            </div>
 
-                <div class="col-lg-6">
-                    <div class="bg-white shadow rounded-4 p-4 text-center">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <h5 class="fw-bold">
+                                            <i class="fas fa-filter text-danger me-2"></i>Filtrage
+                                        </h5>
+                                        <p class="mb-0">
+                                            Filtrez les résultats par type d'élection, région, département ou commune.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <h5 class="fw-bold">
+                                            <i class="fas fa-table text-danger me-2"></i>Tableaux
+                                        </h5>
+                                        <p class="mb-0">
+                                            Consultez les données sous forme de tableaux détaillés avec pourcentages et
+                                            totaux.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <h5 class="fw-bold">
+                                            <i class="fas fa-chart-pie text-danger me-2"></i>Graphiques
+                                        </h5>
+                                        <p class="mb-0">
+                                            Visualisez les résultats avec des graphiques interactifs (camembert,
+                                            barres).
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 h-100">
+                                        <h5 class="fw-bold">
+                                            <i class="fas fa-download text-danger me-2"></i>Téléchargement
+                                        </h5>
+                                        <p class="mb-0">
+                                            Téléchargez les résultats complets au format PDF ou Excel pour analyse.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <p class="fw-bold mb-2">Plateforme Électorale Nationale</p>
-                        <p><i class="bi bi-geo-alt-fill"></i> Yaoundé, Cameroun</p>
-                        <p><i class="bi bi-envelope-fill"></i> dons@elections.cm</p>
-                        <p><i class="bi bi-telephone-fill"></i> +237 699 000 000</p>
+                            <div class="mt-4">
+                                <div class="alert alert-info" role="alert">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    Les résultats sont publiés progressivement au fur et à mesure du dépouillement.
+                                    Actualisez la page pour voir les dernières mises à jour.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="alert alert-warning mt-3 small">
-                            Aucun paiement n’est effectué directement sur le site.
-                            Toute transaction se fait uniquement par contact officiel.
+            <div class="text-center mt-4">
+                <a href="resultats.html" class="btn btn-danger btn-lg rounded-pill px-4">
+                    <i class="fas fa-poll me-2"></i>Voir les résultats
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5" id="faq">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary fs-6 mb-3">Questions fréquentes</span>
+                <h2 class="fw-bold mb-3">Foire Aux Questions</h2>
+                <p class="text-muted">Trouvez rapidement des réponses à vos questions</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Question 1 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="fas fa-question-circle text-primary me-2"></i>
+                                    Comment vérifier si je suis déjà inscrit sur les listes électorales ?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Vous pouvez vérifier votre inscription électorale en :</p>
+                                    <ol>
+                                        <li>Vous connectant à votre compte sur notre plateforme</li>
+                                        <li>Consultant la section "Mon statut électoral"</li>
+                                        <li>Contactant le centre Élections CM le plus proche avec votre numéro CNI</li>
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
 
+                        <!-- Question 2 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="fas fa-question-circle text-primary me-2"></i>
+                                    Quels sont les délais pour s'inscrire comme électeur ?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Les inscriptions électorales sont permanentes mais doivent être faites au moins
+                                        <strong>90 jours avant une élection</strong> pour pouvoir voter à cette
+                                        élection. Consultez notre calendrier électoral pour les dates limites
+                                        spécifiques.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="fas fa-question-circle text-primary me-2"></i>
+                                    Comment récupérer mon identifiant unique si je l'ai perdu ?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Si vous avez perdu votre identifiant unique :</p>
+                                    <ol>
+                                        <li>Utilisez la fonction "Mot de passe oublié" sur la page de connexion</li>
+                                        <li>Vérifiez l'email utilisé lors de votre inscription</li>
+                                        <li>Contactez notre assistance au 237 699 000 000</li>
+                                        <li>Présentez-vous dans un centre Élections CM avec votre CNI</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="fas fa-question-circle text-primary me-2"></i>
+                                    Les résultats publiés sur le site sont-ils définitifs ?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Les résultats publiés sur notre plateforme sont <strong>officiels et
+                                            provisoires</strong> jusqu'à leur validation par le Conseil Constitutionnel.
+                                        Une fois validés, ils deviennent définitifs et sont indiqués comme tels sur le
+                                        site. Nous mettons à jour le statut en temps réel.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="accordion-item border rounded mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="fas fa-question-circle text-primary me-2"></i>
+                                    Puis-je modifier mes informations après soumission d'une candidature ?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Après soumission d'une candidature :</p>
+                                    <ul>
+                                        <li>Les modifications mineures (coordonnées) peuvent être faites jusqu'à 7 jours
+                                            après soumission</li>
+                                        <li>Les modifications majeures (documents d'identité) nécessitent une nouvelle
+                                            soumission</li>
+                                        <li>Après validation par Élections CM, aucune modification n'est possible</li>
+                                    </ul>
+                                    <p>Contactez notre assistance pour toute modification.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
+    <!-- CONTACT -->
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark fs-6 mb-3">Assistance</span>
+                <h2 class="fw-bold mb-3">Besoin d'aide supplémentaire ?</h2>
+                <p class="lead">Notre équipe est à votre disposition</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card bg-primary text-white border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-phone-alt display-4 mb-3"></i>
+                            <h4 class="card-title fw-bold">Téléphone</h4>
+                            <p class="card-text">Appelez notre centre d'assistance</p>
+                            <a href="tel:+2376XXXXXX" class="btn btn-light rounded-pill">+237 699 000 000</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-success text-white border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-envelope display-4 mb-3"></i>
+                            <h4 class="card-title fw-bold">Email</h4>
+                            <p class="card-text">Écrivez-nous pour toute question</p>
+                            <a href="mailto:assistance@elections.cm"
+                                class="btn btn-light rounded-pill">assistance@elections.cm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-warning text-dark border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-map-marker-alt display-4 mb-3"></i>
+                            <h4 class="card-title fw-bold">Centres Élections CM</h4>
+                            <p class="card-text">Rendez-vous dans nos centres</p>
+                            <a href="#" class="btn btn-dark rounded-pill">Trouver un centre</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="mb-3">Horaires d'ouverture : Lundi - Vendredi, 8h00 - 17h00</p>
+                <p class="small">Temps de réponse moyen : 24 heures</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <div id="footer"></div>
 
-    <!-- js -->
+    <!-- Bootstrap JS -->
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
+
+    <!-- Script pour les accordéons -->
+    <script>
+        // Script simple pour les accordéons (géré par Bootstrap)
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ajout d'une fonctionnalité pour garder une FAQ ouverte au chargement si hash présent
+            const hash = window.location.hash;
+            if (hash) {
+                const element = document.querySelector(hash);
+                if (element && element.classList.contains('accordion-collapse')) {
+                    setTimeout(() => {
+                        const bsCollapse = new bootstrap.Collapse(element, {
+                            toggle: true
+                        });
+                    }, 100);
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
